@@ -10,21 +10,36 @@ React是Facebook开发的前端框架。
 
 基本的React组件通过React提供的createClass方法来创建，通过render()方法进行组件UI以及其中数据属性等的传递，当然关于数据、属性、状态等的处理，React有自己的办法，值得注意的是，React的开发中用到了一种可选的JSX语法。下面是创建一个组件的简单示例：
 
-``` javascript
-        var Square = React.createClass({
-            //render()方法负责页面UI
-            render: function () {
-                //在组建内定义的CSS样式
-                var squareStyle = {
-                    height: 150,
-                    backgroundColor: this.props.color
-                };
-                //return出去的就是UI的最终结构
-                return (
-                    <div style={squareStyle}></div>
-                );
-            }
-        });
+``` JavaScript
+var Square = React.createClass({
+    //render()方法负责页面UI
+    render: function () {
+        //在组建内定义的CSS样式
+        var squareStyle = {
+            height: 150,
+            backgroundColor: this.props.color
+        };
+        //return出去的就是UI的最终结构
+        return (
+            <div style={squareStyle}></div>
+        );
+    }
+});
 ```
+
+### 样式
+React组件化思想的另一个体现是，可以在组件内部写只属于本组件的样式代码，如上面所示，可以将样式写入一个对象内部，然后在组件结构上通过style属性进行赋值传递。在JSX语法中，有以下的CSS规则需要注意
+- 带短线的CSS样式写成驼峰式，例如text-align，写成textAlign;
+- 一般px单位不需要写，自动赋值，例如上面的"height: 150"，当然如果不是px为单位的话，就需要手动加上；
+- 除了不带短线的CSS属性之外，其它的属性值必须要带引号，例如`fontSize: "20"`;
+- CSS的属性值可以通过props等传递（上面的backgroundColor）。
+
+当然，React也支持传统的样式表，在JSX语法中，必须通过className来为组件添加类名（因为class是关键字）。
+
+也可以通过内联样式来添加。
+
+### 
+
+
 
 
