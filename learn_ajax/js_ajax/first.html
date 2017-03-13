@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>first page</title>
+</head>
+<body>
+  <input type="button" value="Ajax提交" onclick="ajax1();"/>
+  <div id="resText"></div>
+  <script type="text/javascript">
+  function ajax1(){
+    var xmlHttpReq;
+    if(window.ActiveXObject){
+      xmlHttpReq = new ActiveXObject('Microsoft.XMLHTTP');//IE5/6
+    }else if(window.XMLHttpRequest){
+      xmlHttpReq = new XMLHttpRequest();//实例化一个XMLHTtpRequest对象
+    }
+
+    xmlHttpReq.open("GET","test.php",true);
+    xmlHttpReq.onreadystatechange = requestCallBack;
+    xmlHttpReq.send(null);
+  }
+
+  function requestCallBack(){
+    if(xmlHttpReq.readyState == 4){
+      if(xmlHttpReq.status == 200){
+        document.getElementById('resText').innerHTML = xmlHttpReq.responseText;
+      }
+    }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>萃英图集</title>
+  <style>
+  #smallPic:hover{cursor: pointer;}
+  #smallPic img{opacity: 0.6;}
+  #smallPic img:hover{opacity: 1;border: 1px solid #666;}
+  #smallPic .active{opacity: 1;border: 1px solid #666;}
+  #detail{width: 400px;height: 300px;overflow: hidden;margin-bottom: 10px;position: relative;}
+  #detailPic{height: 300px;width:400px;}
+  #description{width: 398px;height: 20px;line-height:20px;color:#fff;padding:15px;background:rgba(0,0,0,.4);position: absolute;bottom:0;}
+  </style>
+</head>
+<body>
+<div id="detail">
+  <img src="1.jpg" alt="这里显示大图" id="detailPic">
+  <div id="description"></div>
+</div>
+<div id="smallPic">
+  <img src="1.jpg" width="73" height="52" alt="1" id="1" class="active">
+  <img src="5.jpg" width="73" height="52" alt="2" id="2">
+  <img src="4.jpg" width="73" height="52" alt="4" id="3">
+  <img src="2.jpg" width="73" height="52" alt="4" id="4">
+  <img src="6.jpg" width="73" height="52" alt="6" id="5">
+</div>
+<script src="jquery.js"></script>
+<script>
+  window.onload = initPage;
+  function initPage(){
+    var smallPic = document.getElementById('smallPic').getElementsByTagName("img");
+
+    for(var i=0;i<smallPic.length;i++){
+      smallPic[i].onmouseover = function(){
+        detailURL = this.src;
+        document.getElementById('detailPic').src = detailURL;
+      }
+    }
+  }
+
+//创建请求对象
+  function createRequest(){
+    try{
+      request = new XMLHTTPRequest();
+    } catch(tryMS) {
+      try{
+        request = new ActiveXObject("Msxm12.XMLHTTP");
+        }catch(otherMS){
+          try{
+            request = new ActiveXObject("Microsoft.XMLHTTP");
+          }catch(failed){
+            request = null;
+          }
+       }
+    }
+    return request;
+  }
+
+  //获取商品的详细信息
+  function getDetails(itemName){
+    request = createRequest();
+    if(request=null){
+      alert("Unable to create request");
+      return;
+    }
+
+    var url = "getDetails.php?ImageID="+escape(itemName);
+    request.open("GET",url,true);
+    request.onreadystatechange = displayDetails;
+    request.send(null);
+  }
+
+  function displayDetails(){
+    if(request.readyState == 4){
+      if (request.status == 200) {
+        detailDiv = document.getElementById('description');
+        detailDiv.innerHTML = request.responseText;
+      };
+    }
+  }
+
+
+$(document).ready(function(){
+  $('#smallPic img').hover(function(){
+    $('#smallPic img').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $('#1').hover(function(){
+    $('#description').load('1.html');
+  })
+
+  $('#2').hover(function(){
+    $.getJSON('2.json',function(data){
+      var html="";
+      $.each(data,function(entryIndex,entry){
+        html+=entry.text;
+      })
+      $('#description').html(html);
+    });
+  })
+
+  $('#3').hover(function(){
+    $.getScript('3.js');
+  });
+
+  $("#4").hover(function(){
+    $.getJSON('4.json',function(data){
+      var html="";
+      $.each(data,function(entryIndex,entry){
+        html+=entry.text;
+      })
+      $('#description').html(html);
+    });
+  })
+
+  $('#5').hover(function(){
+    $.getScript('5.js');
+  });
+})
+
+</script>
+</body>
+</html>

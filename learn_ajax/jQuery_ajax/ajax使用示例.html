@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ajax使用示例</title>
+  <link rel="stylesheet" href="basic.css">
+  <style>
+  .des{padding: 10px;border: 1px solid #ccc;}
+  li{list-style: circle;}
+  .title{width: 160px;height: 30px;line-height: 30px;background-color: #005599;color: #fff;padding-left: 10px;margin-bottom: 10px;}
+  .big{width: 260px;}
+  </style>
+</head>
+<body>
+  <h3>1.使用load()方法获取HTML</h3>
+  <div class="load">
+    <button>点击获取load()的使用方法</button>
+    <div class="des"></div>
+  </div>
+
+  <h3>2.使用getJSON()方法遍历JSON数据</h3>
+  <div class="getjson">
+    <button>点击获取JSON</button>
+    <div class="des"></div>
+  </div>
+
+  <h3>3.使用getScript()方法遍历JS数据</h3>
+  <div class="getscript">
+    <button>点击获取我的爱好</button>
+    <div class="des"></div>
+  </div>
+
+  <h3>4.使用post()方法使用post方式向服务器发送数据</h3>
+  <div class="post">
+    <div class="title">
+      <span>检测数字的奇偶性</span>
+      <input type="button" value="检测">
+    </div>
+    <div class="num">
+    请输入一个数字：
+      <input type="text" id="txtNumber" size="12">
+    </div>
+  </div>
+
+  <h3>5.使用ajax()方法实现判断正负数</h3>
+  <div class="ajax">
+    <div class="title">
+      <span>检测数字的奇偶性</span>
+      <input type="button" value="检测">
+    </div>
+    <div class="num">
+    请输入一个数字：
+      <input type="text" id="number" size="12">
+    </div>
+  </div>
+
+  <h3>6.使用ajaxSetup()方法快捷实现上两例合并</h3>
+  <div class="ajaxSetup">
+    <div class="big title">
+      <span>检测数字的正负</span>
+      <input type="button" value="检测正负" id="check1">
+      <input type="button" value="检测奇偶性" id="check2">
+    </div>
+    <div class="num">
+    请输入一个数字：
+      <input type="text" class="number" size="12">
+    </div>
+  </div>
+  <script src="jquery-2.1.1.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    //load
+    $('.load button').bind('click',function(){
+      $('.load .des').load('load-method.html',function(){
+        alert('laod完成！');
+      })
+    })
+
+    //getJSON
+    $('.getjson button').click(function(){
+      $this=$(this);
+      console.log('heool');
+      $.getJSON("intro.json",function(data) {
+          /*optional stuff to do after success */
+        $this.attr('disabled','true');
+        $.each(data,function(index, el) {
+          $('.getjson .des').append("<ol><li><p>姓名："+el["name"]+"</p><p>年龄："+el["age"]+"</p>"+"<p>性别："+el["sex"]+"</p></li></ol>");
+        });
+      });
+    })
+
+    //getScript
+    $('.getscript button').click(function(){
+      $this=$(this);
+      $.getScript('hobby.js',function(){
+        $this.attr('disabled','true');
+      })
+    })
+  })
+
+  //post
+  $('.post .title input').click(function(){
+    if($('#txtNumber').val()=='') return;
+    $.post('check.php', {num: $('#txtNumber').val()}, function(data) {
+      /*optional stuff to do after success */
+      $('.post .num').append("<p>你输入的<b>"+$('#txtNumber').val()+"</b>是 <b>"+data+"</b></p>")
+    });
+  })
+
+  //ajax
+  $('.ajax .title input').click(function() {
+    if($('#number').val()=='') return;
+    $.ajax({
+      url:'judge.php',
+      data:{num: $('#number').val()},
+      type:'post',
+      success:function(data){
+        $('.ajax .num').append("<p>你输入的<b> "+$('#number').val()+" </b>是 <b>"+data+"</b></p>")
+      }
+    })
+  });
+
+  //ajaxSetup
+  $.ajaxSetup({
+    type:'post',
+    success:function(data){
+      $('.ajaxSetup .num').append('<p>你输入的<b> '+$('.number').val()+' </b>是<b> '+ data+'</b></p>')
+    }
+  });
+
+  $('#check1').click(function(){
+    if($('.number').val()=='') return;
+    $.ajax({
+      data:{num:$('.number').val()},
+      url:'judge.php'
+    });
+  });
+  $('#check2').click(function(){
+    if($('.number').val()=='') return;
+    $.ajax({
+      data:{num:$('.number').val()},
+      url:'check.php'
+    });
+  });
+  </script>
+</body>
+</html>
