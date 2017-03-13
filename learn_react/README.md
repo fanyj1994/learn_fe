@@ -1,6 +1,13 @@
-# learn-react
+# 什么是React
 
-React是Facebook开发的前端框架。
+React是Facebook开发的前端View层框架，也就是说它专注于用户界面呈现。
+
+# 它有什么特性
+1. 组件化。组件化使得前端业务逻辑更清晰，维护便捷，也就是说，整个Web应用可以被封装成一个个组件，每个组件是完全独立的个体，只提供给外界的借口，所以一个React页面相当于一个组件树。
+![组件化示意图](https://github.com/fouber/blog/raw/master/201508/assets/modular_2.png)（图片来自https://github.com/fouber/blog/issues/10）
+2. 状态管理。React通过state和props实现状态管理，state属于自身状态，props属于外来属性。通过这两者来实现组件状态的更新。
+3. Virtual DOM.React采用虚拟DOM的渲染方式，据说这样的渲染方式大大减少DOM更新，从而大大提升页面性能（具体怎么实现，并不懂）
+
 
 ### 组件化
 
