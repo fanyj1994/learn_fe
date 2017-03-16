@@ -23,6 +23,12 @@ JavaSript严格意义上讲，没有类的概念，而是基于原型的，两�
 - [Sum All Odd Fibonacci Numbers](FreeCodeCamp/Sum-All-Odd-Fibonacci-Numbers.md)
 - [Sum All Primes](FreeCodeCamp/Sum-All-Primes.md)
 - [Smallest Common Multiple](FreeCodeCamp/Smallest-Common-Multiple.md)
+- [Drop it](FreeCodeCamp/Drop-it.md)
+- [Every Be True](FreeCodeCamp/Everything-Be-True.md)
+- [Arguments Optional](FreeCodeCamp/Arguments-Optional.md)
+- [Symmetric Defference](FreeCodeCamp/symmetric-difference.md)
+- [pairwise](FreeCodeCamp/Pairwise.md)
+- [Where Art Thou](FreeCodeCamp/Where-art-thou.md)
 
 # CodeWar题
 - [IQ Test](codewar/IQtest.md);
