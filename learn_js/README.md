@@ -17,3 +17,12 @@ JavaSript严格意义上讲，没有类的概念，而是基于原型的，两�
 # 更多
 - [JS中的数据类型与变量](JS中的数据类型和变量.md)
 - [JS中的对象](关于对象.md)
+
+# FreeCodeCamp题
+- [Sum All Numbers in a Range](FreeCodeCamp/Sum-All-Numbers-in-a-Range.md)
+- [Sum All Odd Fibonacci Numbers](FreeCodeCamp/Sum-All-Odd-Fibonacci-Numbers.md)
+- [Sum All Primes](FreeCodeCamp/Sum-All-Primes.md)
+- [Smallest Common Multiple](FreeCodeCamp/Smallest-Common-Multiple.md)
+
+# CodeWar题
+- [IQ Test](codewar/IQtest.md);
