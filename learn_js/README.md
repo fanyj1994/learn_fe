@@ -31,4 +31,5 @@ JavaSript严格意义上讲，没有类的概念，而是基于原型的，两�
 - [Where Art Thou](FreeCodeCamp/Where-art-thou.md)
 
 # CodeWar题
-- [IQ Test](codewar/IQtest.md);
+- [IQ Test](codewar/IQtest.md)
+- [Two to one](codewar/Two-to-one.md)
