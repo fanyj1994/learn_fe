@@ -1,6 +1,4 @@
 # 什么是Webpack
-
-# 它是干什么用的？
 webpack是一个在前端开发中负责模块管理和依赖的模块打包器，其通过静态分析通过一些规则和插件来生成相应的静态文件。
 ![webpack示意图](https://webpack.js.org/bf093af83ee5548ff10fef24927b7cd2.svg)
 
