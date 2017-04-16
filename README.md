@@ -24,7 +24,10 @@
 
 - [学习JavaScript](learn_js/README.md)
 - [学习CSS](learn_css/README.md)
-- [学习Ajax](learn_ajax/README.md)
 - [学习React](learn_react/README.md)
-- [学习Webpack](learn_webpack/README.md)
-- [学习Http](https://github.com/fanyj1994/learn_fe/issues/1)
+
+### 其他
+- [关于Http](https://github.com/fanyj1994/learn_fe/issues/1)
+- [互联网与浏览器（一）](https://github.com/fanyj1994/learn_fe/issues/2)
+- [互联网与浏览器（二）](https://github.com/fanyj1994/learn_fe/issues/3)
+
