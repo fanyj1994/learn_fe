@@ -1,3 +1,9 @@
+<style>
+body {
+  padding: 20px 0;
+}
+</style>
+
 ### JavaScript数据类型
 
 JavaScript的数据类型分为以下几类：

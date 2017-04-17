@@ -1,3 +1,9 @@
+<style>
+body {
+  padding: 20px 0;
+}
+</style>
+
 # Sum All Numbers in a Range
 
 /*我们会传递给你一个包含两个数字的数组。返回这两个数字和它们之间所有数字的和。

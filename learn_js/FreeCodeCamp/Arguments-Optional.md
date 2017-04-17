@@ -1,3 +1,9 @@
+<style>
+body {
+  padding: 20px 0;
+}
+</style>
+
 # Arguments Optional
 创建一个计算两个参数之和的 function。如果只有一个参数，则返回一个 function，该 function 请求一个参数然后返回求和的结果。
 

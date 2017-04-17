@@ -1,3 +1,9 @@
+<style>
+body {
+  padding: 20px 0;
+}
+</style>
+
 # 关于JavaScript
 JavaScript简称JS，是一种动态的，基于原型的，解释型语言。是NetScape公司的Branden Eich于1995年开发，目的用于表单的输入验证，以减轻服务器的负担，起初名字叫做LiveScript，为了蹭Java的热度，所以改名叫做JavaScript.接着，微软看到JS在NetScape Navigator中表现特别好，也紧跟着在JS基础上推出JScript，和NetScape竞争。所以造成了天下大乱之势。所以，由欧洲计算机制造商协会（ECMA）于1997年推出了ECMAScript的新语言标准，至此，JavaScript标准统一。
 

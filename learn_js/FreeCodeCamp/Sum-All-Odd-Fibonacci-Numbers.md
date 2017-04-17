@@ -1,3 +1,9 @@
+<style>
+body {
+  padding: 20px 0;
+}
+</style>
+
 # Sum All Odd Fibonacci Numbers
 
 /*给一个正整数num，返回小于或等于num的斐波纳契奇数之和。

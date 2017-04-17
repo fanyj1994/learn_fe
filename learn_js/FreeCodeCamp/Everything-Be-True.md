@@ -1,3 +1,9 @@
+<style>
+body {
+  padding: 20px 0;
+}
+</style>
+
 # Everything Be True
 <b>Q: </b>有一个every函数，给定两个参数，第一个参数为包含不定数量对象的数组collection，第二个参数为属性pre，要求检测collection中的每个对象都有属性pre，并且pre的值为true，则函数返回true，反之返回false.
 

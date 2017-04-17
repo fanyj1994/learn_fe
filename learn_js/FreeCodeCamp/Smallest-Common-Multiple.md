@@ -1,3 +1,9 @@
+<style>
+body {
+  padding: 20px 0;
+}
+</style>
+
 # Smallest Common Multiple
 
 /*找出能被两个给定参数和它们之间的连续数字整除的最小公倍数。

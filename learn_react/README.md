@@ -1,3 +1,9 @@
+<style>
+body {
+  padding: 20px 0;
+}
+</style>
+
 # 什么是React
 React是Facebook开发的前端View层框架，也就是说它专注于用户界面呈现。
 
