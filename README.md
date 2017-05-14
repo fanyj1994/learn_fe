@@ -31,6 +31,7 @@ body {
 - [学习JavaScript](learn_js/README.md)
 - [学习CSS](learn_css/README.md)
 - [学习React](learn_react/README.md)
+- [技术日志](tec_diary/2017-5.md)
 
 ### 其他
 - [关于Http](https://github.com/fanyj1994/learn_fe/issues/1)

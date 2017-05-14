@@ -1,9 +1,3 @@
-<style>
-body {
-  padding: 20px 0;
-}
-</style>
-
 # 关于JavaScript
 JavaScript简称JS，是一种动态的，基于原型的，解释型语言。是NetScape公司的Branden Eich于1995年开发，目的用于表单的输入验证，以减轻服务器的负担，起初名字叫做LiveScript，为了蹭Java的热度，所以改名叫做JavaScript.接着，微软看到JS在NetScape Navigator中表现特别好，也紧跟着在JS基础上推出JScript，和NetScape竞争。所以造成了天下大乱之势。所以，由欧洲计算机制造商协会（ECMA）于1997年推出了ECMAScript的新语言标准，至此，JavaScript标准统一。
 
@@ -23,12 +17,14 @@ JavaSript严格意义上讲，没有类的概念，而是基于原型的，两�
 # 更多
 - [JS中的数据类型与变量](JS中的数据类型和变量.md)
 - [JS中的对象](关于对象.md)
+- [JS中的类(Classes)](JS中的类.md)
 
 # FreeCodeCamp题
 - [Sum All Numbers in a Range](FreeCodeCamp/Sum-All-Numbers-in-a-Range.md)
 - [Sum All Odd Fibonacci Numbers](FreeCodeCamp/Sum-All-Odd-Fibonacci-Numbers.md)
 - [Sum All Primes](FreeCodeCamp/Sum-All-Primes.md)
 - [Smallest Common Multiple](FreeCodeCamp/Smallest-Common-Multiple.md)
+
 - [Drop it](FreeCodeCamp/Drop-it.md)
 - [Every Be True](FreeCodeCamp/Everything-Be-True.md)
 - [Arguments Optional](FreeCodeCamp/Arguments-Optional.md)
