@@ -1,8 +1,3 @@
-<style>
-body {
-  padding: 20px 0;
-}
-</style>
 
 # 学习前端技术的笔记
 ### 说在前面
@@ -33,6 +28,7 @@ body {
 - [学习React](learn_react/README.md)
 - [技术日志]()
     - [2017-5](tec_diary/2017-5.md)
+    - [2017-6](tec_diary/2017-6.md)
 
 ### 其他
 - [关于Http](https://github.com/fanyj1994/learn_fe/issues/1)
