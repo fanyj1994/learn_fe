@@ -27,14 +27,14 @@
 - [学习CSS](learn_css/README.md)
 - [学习React](learn_react/README.md)
 - [工具记录]()
-    - [命令行](tools/use-commandline.md) 
+    - [命令行](tools/use-commandline.md)
     - [Chrome Dev Tools 学习](tools/Chrome Dev Tools.md)
 - [技术日志]()
     - [2017-5](tec_diary/2017-5.md)
     - [2017-6](tec_diary/2017-6.md)
+    - [2017-7](tec_diary/2017-7.md)
 
 ### 其他
 - [关于Http](https://github.com/fanyj1994/learn_fe/issues/1)
 - [互联网与浏览器（一）](https://github.com/fanyj1994/learn_fe/issues/2)
 - [互联网与浏览器（二）](https://github.com/fanyj1994/learn_fe/issues/3)
-
