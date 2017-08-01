@@ -33,6 +33,7 @@
     - [2017-5](tec_diary/2017-5.md)
     - [2017-6](tec_diary/2017-6.md)
     - [2017-7](tec_diary/2017-7.md)
+    - [2017-8](tec_diary/2017-8.md)
 
 ### 其他
 - [关于Http](https://github.com/fanyj1994/learn_fe/issues/1)
