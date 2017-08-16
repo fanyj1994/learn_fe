@@ -28,7 +28,7 @@
 - [学习React](learn_react/README.md)
 - [工具记录]()
     - [命令行](tools/use-commandline.md)
-    - [Chrome Dev Tools 学习](tools/Chrome Dev Tools.md)
+    - [Chrome Dev Tools 学习](tools/chrome-dev-tools.md)
 - [技术日志]()
     - [2017-5](tec_diary/2017-5.md)
     - [2017-6](tec_diary/2017-6.md)
