@@ -1,21 +1,17 @@
 const http = require('http')
 const url = require('url')
+const port = 8080
 
-function start(route) {
-  function onRequest(request, response) {
-    const pathname = url.parse(request.url).pathname
-    console.log('Request for ' + pathname + ' received.')
-    console.log('Request received.')
+function startServer(route, handle) {
+  function onRequest(req, res) {
+    const pathname = url.parse(req.url).pathname
+    // console.log('Request for ' + pathname + ' recieved!')
 
-    route(pathname)
-
-    response.writeHead(200, {'Content-Type': 'text/plain'})
-    response.write('Hello World')
-    response.end()
+    route(handle, pathname, res)
   }
 
-  http.createServer(onRequest).listen(8888)
-  console.log('Server has started.')
+  http.createServer(onRequest).listen(port)
+  console.log('Server has started at port ' + port)  
 }
 
-exports.start = start
+exports.startServer = startServer
