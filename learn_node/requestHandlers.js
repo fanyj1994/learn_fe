@@ -30,8 +30,7 @@ function upload(response, request) {
   console.log('About to parse')
   form.parse(request, (error, fields, files) => {
     console.log('parse done.')
-    console.log(files.upload.path)
-    // fs.renameSync(files.upload.path, '/tmp/test.png')
+    fs.renameSync(files.upload.path, '/tmp/test.png')
     response.writeHead(200, {'Content-Type': 'text/html'})
     response.write('recieved image;<br>')
     response.write('<img src="/show">')
