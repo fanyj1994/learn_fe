@@ -6,11 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Useful CSS Snippets Collection</title>
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      margin-top: -30px;
+    }
     h3::before {
       content: '# ';
     }
     h3 {
-      text-shadow: 1px 1px 1px #999;
+      text-shadow: 1px 1px 0px #444;
+      background-color: #007acc;
+      font-size: 20px;
+      height: 45px;
+      line-height: 45px;
+      color: #fff;
+      padding-left: 10px;
+      margin: 50px 0;
     }
   /* Bouncing Loader */
   @keyframes bouncing-loader {
@@ -19,13 +33,14 @@
       transform: translateY(0);
     }
     to {
-      opacity: .1;
+      opacity: .2;
       transform: translateY(-1rem);      
     }
   }
 
   .bouncing-loader {
     display: flex;
+    margin-left: 50px;
   }
 
   .bouncing-loader > div { 
@@ -45,18 +60,36 @@
   .bouncing-loader > div:nth-child(3) {
     animation-delay: .4s;
   }
+
+  /* dount spinner */
+  @keyframes dount-spinner {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .dount-spinner {
+    animation: dount-spinner 1s linear infinite;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid #e5e5e5;
+    border-left-color: darkslategrey;
+    margin-left: 100px;
+  }
   </style>
 </head>
 <body>
-  <h3>Bouncing loader</h3>
-  <div class="bouncing-loader">
+  <h3>Bouncing Loader</h3>
+  <div class="bouncing-loader container">
     <div></div>
     <div></div>
     <div></div>
   </div>
-  <h3>Box-sizing reset</h3>
-  <div class="box-sizing">
-
-  </div>
+  <h3>Donut Spinner</h3>
+  <div class="dount-spinner"></div>
 </body>
 </html>
