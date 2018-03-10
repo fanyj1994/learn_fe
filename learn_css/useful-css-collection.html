@@ -106,6 +106,25 @@
     transform: scaleX(1);
     transform-origin: left bottom;
   }
+
+  /* evenly-distributed-children */
+  .evenly-distributed-children {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    height: 120px;
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /* grid layout */
+  .grid-layout {
+    display: grid;
+    grid-gap: 10px;
+  }
   </style>
 </head>
 <body>
@@ -120,6 +139,24 @@
   <h3>Hover Underline Animation</h3>
   <div class="hover-underline-animation">
     Hover this text to see the effect!
+  </div>
+  <h3>Evenly Distributed Children</h3>
+  <div class="evenly-distributed-children">
+    <p>Item1</p>
+    <p>Item2</p>
+    <p>Item3</p> 
+  </div>
+
+  <h3>Grid Layout</h3>
+  <div class="grid-layout">
+    <div class="header">Header</div>
+    <div class="siderbar">Siderbar</div>
+    <div class="content">
+      content
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati iure similique iste doloremque adipisci quis et eos alias vel? Dolore tenetur quidem recusandae ex voluptatibus rem molestiae modi nihil.
+    </div>
+    <div class="footer">Footer</div>
   </div>
 </body>
 </html>
