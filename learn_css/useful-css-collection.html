@@ -10,6 +10,12 @@
       padding: 0;
       margin: 0;
     }
+
+    :root {
+      --font-color: #269186;
+      --font-size: 26px;
+      --font-style: italic;
+    }
     body {
       margin-top: -30px;
     }
@@ -24,7 +30,7 @@
       line-height: 45px;
       color: #fff;
       padding-left: 10px;
-      margin: 50px 0;
+      margin: 40px 0;
     }
   /* Bouncing Loader */
   @keyframes bouncing-loader {
@@ -125,6 +131,21 @@
     display: grid;
     grid-gap: 10px;
   }
+
+  /* css variables */
+  .custom-variables {
+    color: var(--font-color);
+    font-size: var(--font-size);
+    font-style: var(--font-style);
+  }
+
+  /* truncate-text */
+  .truncate-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 200px;
+  }
   </style>
 </head>
 <body>
@@ -158,5 +179,11 @@
     </div>
     <div class="footer">Footer</div>
   </div>
+
+  <h3>CSS Variables</h3>
+  <p class="custom-variables">来自 CSS 变量的样式值</p>
+
+  <h3>Truncate Text</h3>
+  <p class="truncate-text">我是很长的一段话，但我在一定长度会被截断，拭目以待！</p>
 </body>
 </html>
