@@ -146,6 +146,20 @@
     text-overflow: ellipsis;
     width: 200px;
   }
+
+  /* grid layout */
+  .grid-layout {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr;
+  }
+  .grid-layout > div {
+    background-color: brown;
+    padding: 10px;
+  }
+  .siderbar {
+    grid-row: 1/4;
+  }
   </style>
 </head>
 <body>
@@ -175,7 +189,9 @@
     <div class="content">
       content
       <br>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati iure similique iste doloremque adipisci quis et eos alias vel? Dolore tenetur quidem recusandae ex voluptatibus rem molestiae modi nihil.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      A obcaecati iure similique iste doloremque adipisci quis et eos alias vel? 
+      Dolore tenetur quidem recusandae ex voluptatibus rem molestiae modi nihil.
     </div>
     <div class="footer">Footer</div>
   </div>
