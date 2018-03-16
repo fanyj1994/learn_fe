@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +17,15 @@
       --font-size: 26px;
       --font-style: italic;
     }
+
     body {
       margin-top: -30px;
     }
+
     h3::before {
       content: '# ';
     }
+
     h3 {
       text-shadow: 1px 1px 0px #444;
       background-color: #007acc;
@@ -32,136 +36,174 @@
       padding-left: 10px;
       margin: 40px 0;
     }
-  /* Bouncing Loader */
-  @keyframes bouncing-loader {
-    from {
-      opacity: 1;
-      transform: translateY(0);
+
+    /* Bouncing Loader */
+
+    @keyframes bouncing-loader {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: .2;
+        transform: translateY(-1rem);
+      }
     }
-    to {
-      opacity: .2;
-      transform: translateY(-1rem);      
+
+    .bouncing-loader {
+      display: flex;
+      margin-left: 50px;
     }
-  }
 
-  .bouncing-loader {
-    display: flex;
-    margin-left: 50px;
-  }
-
-  .bouncing-loader > div { 
-    width: 1rem;
-    height: 1rem;
-    margin: .4rem;
-    background: deepskyblue;
-    border-radius: 50%;
-    box-shadow: 1px 1px 1px 1px #ddeeee;
-    animation: bouncing-loader .6s infinite alternate;
-  }
-
-  .bouncing-loader > div:nth-child(2) {
-    animation-delay: .2s;
-  }
-
-  .bouncing-loader > div:nth-child(3) {
-    animation-delay: .4s;
-  }
-
-  /* dount spinner */
-  @keyframes dount-spinner {
-    from {
-      transform: rotate(0);
+    .bouncing-loader>div {
+      width: 1rem;
+      height: 1rem;
+      margin: .4rem;
+      background: deepskyblue;
+      border-radius: 50%;
+      box-shadow: 1px 1px 1px 1px #ddeeee;
+      animation: bouncing-loader .6s infinite alternate;
     }
-    to {
-      transform: rotate(360deg);
+
+    .bouncing-loader>div:nth-child(2) {
+      animation-delay: .2s;
     }
-  }
 
-  .dount-spinner {
-    animation: dount-spinner 1s linear infinite;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 5px solid #e5e5e5;
-    border-left-color: darkslategrey;
-    margin-left: 100px;
-  }
+    .bouncing-loader>div:nth-child(3) {
+      animation-delay: .4s;
+    }
 
-  /* hover-underline-animation */
-  .hover-underline-animation {
-    margin-left: 2em;
-    height: 30px;
-    display: inline-block;
-    position: relative;
-  }
+    /* dount spinner */
 
-  .hover-underline-animation::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    border-top: 1px dashed cyan;
-    border-bottom: 1px dashed chartreuse;
-    position: absolute;
-    left: 0; bottom: 0;
-    transform: scaleX(0);
-    transform-origin: right bottom;
-    transition:  transform .4s ease-out;
-  }
-  .hover-underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: left bottom;
-  }
+    @keyframes dount-spinner {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
-  /* evenly-distributed-children */
-  .evenly-distributed-children {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-    height: 120px;
-    background-color: #f5f5f5;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    justify-content: space-around;
-    align-items: center;
-  }
+    .dount-spinner {
+      animation: dount-spinner 1s linear infinite;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 5px solid #e5e5e5;
+      border-left-color: darkslategrey;
+      margin-left: 100px;
+    }
 
-  /* grid layout */
-  .grid-layout {
-    display: grid;
-    grid-gap: 10px;
-  }
+    /* hover-underline-animation */
 
-  /* css variables */
-  .custom-variables {
-    color: var(--font-color);
-    font-size: var(--font-size);
-    font-style: var(--font-style);
-  }
+    .hover-underline-animation {
+      margin-left: 2em;
+      height: 30px;
+      display: inline-block;
+      position: relative;
+    }
 
-  /* truncate-text */
-  .truncate-text {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 200px;
-  }
+    .hover-underline-animation::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      border-top: 1px dashed cyan;
+      border-bottom: 1px dashed chartreuse;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: scaleX(0);
+      transform-origin: right bottom;
+      transition: transform .4s ease-out;
+    }
 
-  /* grid layout */
-  .grid-layout {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 3fr;
-  }
-  .grid-layout > div {
-    background-color: brown;
-    padding: 10px;
-  }
-  .siderbar {
-    grid-row: 1/4;
-  }
+    .hover-underline-animation:hover::after {
+      transform: scaleX(1);
+      transform-origin: left bottom;
+    }
+
+    /* evenly-distributed-children */
+
+    .evenly-distributed-children {
+      display: flex;
+      width: 80%;
+      margin: 0 auto;
+      height: 120px;
+      background-color: #f5f5f5;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    /* grid layout */
+
+    .grid-layout {
+      display: grid;
+      grid-gap: 10px;
+    }
+
+    /* css variables */
+
+    .custom-variables {
+      color: var(--font-color);
+      font-size: var(--font-size);
+      font-style: var(--font-style);
+    }
+
+    /* truncate-text */
+
+    .truncate-text {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 200px;
+    }
+
+    /* grid layout */
+
+    .grid-layout {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 1fr 3fr;
+    }
+
+    .grid-layout>div {
+      background-color: brown;
+      padding: 10px;
+    }
+
+    .siderbar {
+      grid-row: 1/4;
+    }
+
+    /* more border */
+    .more-borders {
+      display: flex;
+    }
+    .more-border {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 80px;
+      background-color: #eee;
+      box-shadow: 0 0 0 10px #111, 0 0 0 20px #333,
+      0 0 0 30px #555, 0 0 0 40px #777,
+      0 0 0 50px #999, 0 0 0 60px #aaa;
+    }
+
+    .solid-and-dash-border {
+      width: 200px;
+      height: 100px;
+      background-color: #eee;
+      border: 5px solid #B4A078;
+      outline: 1px dashed #B4A078;
+      outline-offset: -10px;
+      margin: 80px;
   </style>
 </head>
+
 <body>
   <h3>Bouncing Loader</h3>
   <div class="bouncing-loader container">
@@ -179,7 +221,7 @@
   <div class="evenly-distributed-children">
     <p>Item1</p>
     <p>Item2</p>
-    <p>Item3</p> 
+    <p>Item3</p>
   </div>
 
   <h3>Grid Layout</h3>
@@ -188,10 +230,8 @@
     <div class="siderbar">Siderbar</div>
     <div class="content">
       content
-      <br>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      A obcaecati iure similique iste doloremque adipisci quis et eos alias vel? 
-      Dolore tenetur quidem recusandae ex voluptatibus rem molestiae modi nihil.
+      <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. A obcaecati iure similique iste doloremque adipisci quis
+      et eos alias vel? Dolore tenetur quidem recusandae ex voluptatibus rem molestiae modi nihil.
     </div>
     <div class="footer">Footer</div>
   </div>
@@ -201,5 +241,12 @@
 
   <h3>Truncate Text</h3>
   <p class="truncate-text">我是很长的一段话，但我在一定长度会被截断，拭目以待！</p>
+
+  <h3>多重边框</h3>
+  <div class="more-borders">
+    <div class="more-border"></div>
+    <div class="solid-and-dash-border"></div>
+  </div>
 </body>
+
 </html>
