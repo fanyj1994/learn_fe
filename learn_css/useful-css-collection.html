@@ -235,6 +235,29 @@
     .background-position .position3 {
       background-position: calc(100% - 40px) calc(100% - 20px);
     }
+
+    /* process */
+    .progress-outer {}
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 15ch }
+    } 
+
+    @keyframes caret {
+      50% { border-right-color: transparent; }
+    }
+    
+    h1.pic {
+      font: bold 200% Consolas, Monaco, monospace;
+      width: 15ch;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .05em solid;
+      animation: typing 4s steps(15),
+                 caret 1s steps(1) infinite;
+    
+    }
   </style>
 </head>
 
@@ -291,5 +314,16 @@
     <div class="position2">background-origin</div>
     <div class="position3">calc()</div>
   </div>
+
+  <h3>Progress</h3>
+  <div class="progress">
+    <div class="progress-outer">
+      <div class="progress-inner"></div>
+    </div>
+  </div>
+
+  <h1 class="pic">CSS is awesome!</div>
+
+    
 </body>
 </html>
