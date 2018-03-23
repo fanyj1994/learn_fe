@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,13 +28,15 @@
 
     h3 {
       text-shadow: 1px 1px 0px #444;
-      background-color: #007acc;
-      font-size: 20px;
+      font-size: 28px;
       height: 45px;
       line-height: 45px;
-      color: #fff;
+      color: #333;
       padding-left: 10px;
       margin: 40px 0;
+    }
+    h3 ~ div {
+      padding-left: 50px;
     }
 
     /* Bouncing Loader */
@@ -102,7 +105,7 @@
       position: relative;
     }
 
-    .hover-underline-animation::after {
+    .hover-underline-animation p::after {
       content: "";
       display: block;
       width: 100%;
@@ -117,7 +120,7 @@
       transition: transform .4s ease-out;
     }
 
-    .hover-underline-animation:hover::after {
+    .hover-underline-animation p:hover::after {
       transform: scaleX(1);
       transform-origin: left bottom;
     }
@@ -178,9 +181,11 @@
     }
 
     /* more border */
+
     .more-borders {
       display: flex;
     }
+
     .more-border {
       width: 80px;
       height: 80px;
@@ -212,6 +217,7 @@
     }
 
     /* background-postion */
+
     .background-position {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -219,7 +225,7 @@
       grid-auto-rows: minmax(150px, auto);
     }
 
-    .background-position > div{
+    .background-position>div {
       padding: 20px 40px;
       border: 4px solid #B4A078;
       background: url(./Rose.jpg) no-repeat bottom right;
@@ -229,25 +235,49 @@
     .background-position .position1 {
       background-position: bottom 20px right 40px;
     }
+
     .background-position .position2 {
       background-origin: content-box;
     }
+
     .background-position .position3 {
       background-position: calc(100% - 40px) calc(100% - 20px);
     }
 
     /* process */
-    .progress-outer {}
-    
+
+    .progress-outer {
+      width: 500px;
+      height: 15px;
+      border-radius: 8px;
+      background: rgba(180, 160, 120, .2);
+    }
+
+    .progress-inner {
+      width: 60%;
+      height: inherit;
+      border-radius: 6px;
+      background: repeating-linear-gradient(-45deg, #D9CFBB 25%, #C3B393 0, #C3B393 50%,
+      #D9CFBB 0, #D9CFBB 75%, #C3B393 0);
+      background-size: 16px 16px;
+      animation: panoramic 20s linear infinite;
+    }
+
     @keyframes typing {
-      from { width: 0 }
-      to { width: 15ch }
-    } 
+      from {
+        width: 0
+      }
+      to {
+        width: 15ch
+      }
+    }
 
     @keyframes caret {
-      50% { border-right-color: transparent; }
+      50% {
+        border-right-color: transparent;
+      }
     }
-    
+
     h1.pic {
       font: bold 200% Consolas, Monaco, monospace;
       width: 15ch;
@@ -255,8 +285,8 @@
       overflow: hidden;
       border-right: .05em solid;
       animation: typing 4s steps(15),
-                 caret 1s steps(1) infinite;
-    
+      caret 1s steps(1) infinite;
+
     }
   </style>
 </head>
@@ -269,10 +299,12 @@
     <div></div>
   </div>
   <h3>Donut Spinner</h3>
-  <div class="dount-spinner"></div>
+  <div>
+    <div class="dount-spinner"></div>
+  </div>
   <h3>Hover Underline Animation</h3>
   <div class="hover-underline-animation">
-    Hover this text to see the effect!
+    <p> Hover this text to see the effect!</p>
   </div>
   <h3>Evenly Distributed Children</h3>
   <div class="evenly-distributed-children">
@@ -322,8 +354,10 @@
     </div>
   </div>
 
-  <h1 class="pic">CSS is awesome!</div>
-
-    
+  <h3>Typing Text</h3>
+  <div>
+    <h1 class="pic">CSS is awesome!</div>
+  </div>
 </body>
+
 </html>
