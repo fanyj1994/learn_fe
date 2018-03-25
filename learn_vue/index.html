@@ -6,6 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vue Test</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <style>
+  #app-5 p {
+    color: green;
+  }
+  #app-5 .red {
+    color: red;
+  }
+  .big {
+    font-size: 30px;
+  }
+  </style>
 </head>
 <body>
 <div id="app">
@@ -33,6 +44,18 @@
       v-bind:key="item.id">
     </todo-item>
   </ol>
+</div>
+
+<div id="app-4">
+  <p>这里是纯文本值： {{ msg }}</p>
+  <p>这里是以 HTML 语法插入：<span v-html="msg"></span></p>
+</div>
+
+<div id="app-5">
+  <p :class="{ red: isRed, big: goBigger }">看我变身</p>
+  <button @click="isRed = !isRed">换个颜色！</button>
+  <button v-if="!goBigger" @click="goBigger = true">变大一点</button>
+  <button v-else @click="goBigger = false">变小一点</button>  
 </div>
 <script>
   const app = new Vue({
@@ -76,6 +99,21 @@
         { id: 1, text: '奶酪' },
         { id: 2, text: '随便其它什么人吃的东西' }
       ]
+    }
+  })
+
+  const app4 = new Vue({
+    el: '#app-4',
+    data: {
+      msg: '<span style="font-size: 24px; color: red">哈哈哈</span>'
+    }
+  })
+
+  const app5 = new Vue({
+    el: '#app-5',
+    data: {
+      isRed: false,
+      goBigger: false
     }
   })
 </script>
