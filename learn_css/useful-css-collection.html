@@ -286,7 +286,22 @@
       border-right: .05em solid;
       animation: typing 4s steps(15),
       caret 1s steps(1) infinite;
+    }
 
+    /* constant-width-to-height-ratio */
+    .constant-width-to-height-ratio {
+      width: 35%;
+      background-color: #333;
+    }
+    .constant-width-to-height-ratio:before {
+      content: '';
+      padding-top: 100%; /* 使得高度与宽度永远相等 */
+      float: left;
+    }
+    .constant-width-to-height-ratio:after {
+      content: '';
+      display: block;
+      clear: both;
     }
 
     /* formate-width */
@@ -372,6 +387,11 @@
   <h3>Typing Text</h3>
   <div>
     <h1 class="pic">CSS is awesome!</div>
+  </div>
+
+  <h3>等宽高比</h3>
+  <div>
+    <div class="constant-width-to-height-ratio">缩放浏览器查看元素尺寸变化</div>
   </div>
 
   <h3>格式化宽度</h3>
