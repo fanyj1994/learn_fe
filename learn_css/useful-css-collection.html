@@ -338,6 +338,19 @@
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
     }
+
+    .not-select {
+      display: flex;
+      list-style-type: none;
+    }
+    
+    .not-select li {
+      padding: 0 2em;
+    }
+
+    .not-select li:not(:last-child) {
+      border-right: 1px solid #aaa;
+    }
   </style>
 </head>
 
@@ -434,6 +447,17 @@
   <h3>渐变文本</h3>
   <div>
     <div class="gradient-text">渐变文本</div>
+  </div>
+
+  <h3>非选择器</h3>
+  <div>
+    <ul class="not-select">
+      <li>一</li>
+      <li>二</li>
+      <li>三</li>
+      <li>四</li>
+      <li>五</li>
+    </ul>
   </div>
 </body>
 
