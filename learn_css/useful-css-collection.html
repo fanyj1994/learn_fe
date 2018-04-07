@@ -317,7 +317,27 @@
       left: 20px; right: 20px;
       background-color: #000;
     }
-    
+
+    .custom-selected-text::selection {
+      background-color: red;
+      color: #ffffff;
+    } 
+
+    .etched-text {
+      height: 60px;
+      line-height: 60px;
+      font-size: 30px;
+      background-color: #9c9c9c;
+      text-shadow: 0 2px #fff;
+    }   
+
+    .gradient-text {
+      font-size: 40px;
+      font-weight: bold;
+      background: -webkit-linear-gradient(pink, red);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
   </style>
 </head>
 
@@ -397,6 +417,23 @@
   <h3>格式化宽度</h3>
   <div id="formate-width">
     <div class="child">hahahahhahaajja</div>
+  </div>
+
+  <h3>自定义文本被选中样式</h3>
+  <div>
+    <div class="custom-selected-text">
+      鼠标选中文字查看样式
+    </div>
+  </div>
+
+  <h3>Etched text</h3>
+  <div class="etched-text">
+    <div>蚀刻文本</div>
+  </div>
+
+  <h3>渐变文本</h3>
+  <div>
+    <div class="gradient-text">渐变文本</div>
   </div>
 </body>
 
