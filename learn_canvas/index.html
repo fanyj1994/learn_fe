@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>learn canvas</title>
+  <style>
+    canvas {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="400" height="400"></canvas>
+<script>
+  let canvas = document.getElementById('canvas');
+  let cx = canvas.getContext('2d');
+
+
+  cx.fillStyle = '#fff';
+  cx.strokeStyle = '#fff';
+  cx.shadowBlur = 20;
+  cx.shadowColor = '#fff';
+
+  cx.beginPath()
+  cx.arc(60, 60, 50, 0, Math.PI * 2, false);
+  cx.fill();
+  cx.closePath();
+  // cx.lineWidth = 10;
+  cx.lineCap = 'round';
+  cx.moveTo(150, 50);
+  cx.lineTo(200, 50);
+  cx.lineTo(175, 100);
+  cx.closePath(); 
+
+  cx.fillRect(10, 120, 100, 80);
+  cx.strokeRect(120, 120, 100, 80);
+  cx.stroke();
+
+  let grd = cx.createLinearGradient(0, 210, 0, 400);  // 设置渐变的起点和终点坐标
+  grd.addColorStop(0, 'white');
+  grd.addColorStop(0.2, 'red');
+  grd.addColorStop(0.4, 'orange');
+  grd.addColorStop(0.6, 'blue');
+  grd.addColorStop(0.8, 'green');
+  grd.addColorStop(1, 'yellow');  
+  cx.fillStyle = grd;
+  cx.fillRect(0, 210, 400, 180);
+  
+</script>
+</body>
+</html>
+
