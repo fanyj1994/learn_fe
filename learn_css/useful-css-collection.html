@@ -351,6 +351,34 @@
     .not-select li:not(:last-child) {
       border-right: 1px solid #aaa;
     }
+
+    .overflow-scroll-gradient {
+      position: relative;
+    }
+
+    .overflow-scroll-gradient::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0; 
+      width: 150px;
+      height: 45px;
+      background: linear-gradient(rgba(255, 255, 255, 0.001), #fff);
+    }
+
+    .overflow-scroll-gradient_scroller {
+      width: 150px;
+      height: 200px;
+      padding: 0 15px;
+      line-height: 1.2;
+      border: 1px solid #a6a6a6;
+      background-color: #fff;
+      overflow-y: scroll;
+    }
+
+    .reset-all-styles {
+      all: initial;
+    }
   </style>
 </head>
 
@@ -458,6 +486,37 @@
       <li>四</li>
       <li>五</li>
     </ul>
+  </div>
+
+  <h3>溢出滚动渐变</h3>
+  <div class="overflow-scroll-gradient">
+    <div class="overflow-scroll-gradient_scroller">
+      Content to be scrolled
+      Content to be scrolled
+      Content to be scrolled
+      Content to be scrolled
+      Content to be scrolled
+      Content to be scrolled
+      Content to be scrolled      
+      Content to be scrolled
+      Content to be scrolled
+      Content to be scrolled
+      Content to be scrolled      
+      Content to be scrolled
+      Content to be scrolled
+      Content to be scrolled
+      Content to be scrolled     
+      Content to be scrolled
+      Content to be scrolled
+      Content to be scrolled
+      Content to be scrolled
+    </div>
+  </div>
+
+  <h3>重置所有样式</h3>
+  <div class="reset-all-styles">
+    <h4>Title</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id exercitationem nulla qui repellat laborum vitae, molestias tempora velit natus. Quas, assumenda nisi. Quisquam enim qui iure, consequatur velit sit?</p>
   </div>
 </body>
 
