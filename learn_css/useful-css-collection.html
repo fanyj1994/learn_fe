@@ -18,8 +18,11 @@
       --font-style: italic;
     }
 
+    /* 使用系统字体 */
     body {
       margin-top: -30px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+        Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
     h3::before {
@@ -379,6 +382,50 @@
     .reset-all-styles {
       all: initial;
     }
+
+    .max-height-transition {
+      transition: max-height 0.5s;
+      overflow: hidden;
+      max-height: 0;
+    }
+
+    .trigger:hover > .max-height-transition {
+      max-height: var(--max-height);
+    }
+
+    .btn {
+      position: relative;
+      border: none;
+      outline:  none;
+      cursor: pointer;
+      background-color: #f72359;
+      color: #fff;
+      font-size: 2em;
+      overflow: hidden;
+      border-radius: 50px;
+      padding: .4em 2em;
+    }
+
+    .btn::before {
+      --size: 0;
+      content: "";
+      width: var(--size);
+      height: var(--size);
+      position: absolute;
+      top: var(--y); left: var(--x);
+      background: radial-gradient(circle closest-side, #4405f7, transparent);
+      transform: translate(-50%, -50%);
+      transition: width .2s ease, height .2s ease;
+    }
+
+    .btn span {
+      position: relative;
+      pointer-events: none;
+    }
+
+    .btn:hover::before {
+      --size: 400px;
+    }
   </style>
 </head>
 
@@ -518,6 +565,39 @@
     <h4>Title</h4>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id exercitationem nulla qui repellat laborum vitae, molestias tempora velit natus. Quas, assumenda nisi. Quisquam enim qui iure, consequatur velit sit?</p>
   </div>
+
+  <h3>Max height transition</h3>
+  <div class="trigger">
+    查看全部内容
+    <div class="max-height-transition" id="max-height-transition">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Dolores nulla minima omnis odit blanditiis sit! Atque dicta voluptatibus, 
+        pariatur aperiam consequuntur iusto, beatae praesentium deleniti quibusdam quae amet vel nulla.
+    </div>
+  </div>
+
+  <h3>鼠标光标渐变跟踪</h3>
+  <div>
+    <button class="btn"> 
+      <span>Hover me to get surprise</span>
+    </button>
+  </div>
+  <script>
+  // 高度渐变
+  let maxHeightContainer = document.querySelector('#max-height-transition');
+  let height = maxHeightContainer.scrollHeight;
+  maxHeightContainer.style.setProperty('--max-height', height + 'px');
+
+  document.querySelector('.btn').onmousemove = (e) => {
+
+  const x = e.pageX - e.target.offsetLeft
+  const y = e.pageY - e.target.offsetTop
+
+  e.target.style.setProperty('--x', `${ x }px`)
+  e.target.style.setProperty('--y', `${ y }px`)
+
+  }
+  </script>
 </body>
 
 </html>
