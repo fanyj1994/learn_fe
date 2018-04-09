@@ -426,6 +426,19 @@
     .btn:hover::before {
       --size: 400px;
     }
+
+    .sibling-fade {
+      display: flex;
+    }
+
+    .sibling-fade span {
+      padding: 0 30px;
+      transition: color .5s;
+    }
+
+    .sibling-fade:hover span:not(:hover) {
+      color: rgba(0, 0, 0, .4)
+    }
   </style>
 </head>
 
@@ -581,6 +594,16 @@
     <button class="btn"> 
       <span>Hover me to get surprise</span>
     </button>
+  </div>
+
+  <h3>淡化悬停元素同级元素</h3>
+  <div class="sibling-fade">
+    <span>Item 1</span>
+    <span>Item 2</span>
+    <span>Item 3</span>
+    <span>Item 4</span>
+    <span>Item 5</span>
+    <span>Item 6</span>
   </div>
   <script>
   // 高度渐变
