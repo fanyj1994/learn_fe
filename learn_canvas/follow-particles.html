@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>粒子跟随效果</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  canvas {
+    background-color: #000;
+  }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+  let canvas = document.getElementById('canvas'),
+      ctx = canvas.getContext('2d'),
+      para = {
+        num: 100,
+        color: false,
+        r: 0.9,
+        o: 0.09,
+        a: 1
+      },
+      color,
+      color2,
+      round_arr = [];
+
+  const WIDTH = canvas.width = document.documentElement.clientWidth,
+        HEIGHT = canvas.height = document.documentElement.clientHeight;
+  
+
+  window.onmousemove = function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    round_arr.push({
+      mouseX,
+      mouseY,
+      r: para.r,
+      o: 1,
+    })
+  }
+
+  if (para.color) {
+    color2 = para.color;
+  } else {
+    color = Math.random() * 360;
+  }
+
+  function animate () {
+    if (!para.color) {
+      color += 0.1;
+      color2 = `hsl(${color}, 100%, 80%)`;
+    }
+
+    ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+    for (let i = 0; i < round_arr.length; i++) {
+      ctx.fillStyle = color2;
+      ctx.beginPath();
+      ctx.arc(round_arr[i].mouseX, round_arr[i].mouseY, round_arr[i].r, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.fill();
+
+      round_arr[i].r += para.r;
+      round_arr[i].o -= para.o;
+
+      if (round_arr[i].o <= 0) {
+        round_arr.splice(i, 1);
+        i--;
+      }
+    }
+
+    window.requestAnimationFrame(animate);
+  }
+
+  animate();
+  </script>
+</body>
+</html>

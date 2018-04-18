@@ -45,6 +45,7 @@
     draw () {
       content.fillStyle = this.color;
       content.shadowBlur = this.r * 2;
+      content.shadowColor = this.color;
       content.beginPath();
       content.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
       content.closePath();
@@ -93,7 +94,7 @@
     for (let i = 0; i < initParticleNumbers; i++) {
       round[i] = new Round_item(i, Math.random() * WIDTH, Math.random() * HEIGHT);
       round[i].draw();
-      console.log(round[i].color);
+      // console.log(round[i].color);
     }
     animate();
   }
