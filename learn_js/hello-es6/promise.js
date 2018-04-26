@@ -8,3 +8,16 @@ fetch(
   .catch(err => {
     console.log(err)
   })
+
+fetch(
+  'https://raw.githubusercontent.com/bpesquet/thejsway/master/resources/movies.json'
+)
+  .then(response => response.json())
+  .then(movies => {
+    movies.forEach(movie => {
+      console.log(movie.title)
+    })
+  })
+  .catch(err => {
+    console.error(err.message)
+  })
