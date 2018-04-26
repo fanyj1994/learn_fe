@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>A few programming languages</h2>
+  <ul id="languageList">
+  </ul>
+
+  <h2>Some famous paintings</h2>
+  <table id="paintings">
+    <tr>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Artist</th>
+    </tr>
+  </table>
+
+  <script>
+    // Task1
+    fetch(
+        'https://raw.githubusercontent.com/bpesquet/thejsway/master/resources/languages.txt'
+      )
+      .then(response => response.text())
+      .then(text => {
+        console.log(text)
+        let languageItems = text.split(';');
+        let languageListContainer = document.createDocumentFragment();
+        let languageList = document.querySelector('#languageList');
+
+        languageItems.forEach(language => {
+          const languageItem = document.createElement('li');
+          languageItem.textContent = language;
+          languageListContainer.appendChild(languageItem);
+        })
+
+        languageList.appendChild(languageListContainer);
+      })
+
+    // Task2
+    fetch(
+      'https://raw.githubusercontent.com/bpesquet/thejsway/master/resources/paintings.json'
+    )
+      .then(response => response.json())
+      .then(paintings => {
+        let paintingsList = document.querySelector('#paintings');
+        let paintingsFragment = document.createDocumentFragment();
+
+        paintings.forEach(painting => {
+          let paintingItem = document.createElement('tr');
+          let paintingName = document.createElement('td');
+          let paintingYear = document.createElement('td');
+          let paintingAuthor = document.createElement('td');
+
+          paintingName.textContent = painting.name;
+          paintingYear.textContent = painting.year;
+          paintingAuthor.textContent = painting.artist;
+
+          paintingItem.appendChild(paintingName);
+          paintingItem.appendChild(paintingYear);
+          paintingItem.appendChild(paintingAuthor);
+            
+          paintingsFragment.appendChild(paintingItem);
+
+          console.log(paintingsFragment)
+          paintingsList.appendChild(paintingsFragment)
+        })
+      })
+  </script>
+</body>
+
+</html>
