@@ -18,12 +18,20 @@
     overflow: hidden;
   }
 
+  h1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: blanchedalmond;
+  }
+
   canvas {
     background-color: #000;
   }
   </style>
 </head>
 <body>
+  <h1>鼠标跟随效果</h1>
   <canvas id="canvas"></canvas>
   <script>
   let canvas = document.getElementById('canvas'),
@@ -35,14 +43,14 @@
         o: 0.09,
         a: 1
       },
+      hue,
       color,
-      color2,
       round_arr = [];
 
   const WIDTH = canvas.width = document.documentElement.clientWidth,
         HEIGHT = canvas.height = document.documentElement.clientHeight;
   
-
+  // 鼠标移动，获取鼠标坐标，建立数组
   window.onmousemove = function (e) {
     mouseX = e.clientX;
     mouseY = e.clientY;
@@ -56,21 +64,22 @@
   }
 
   if (para.color) {
-    color2 = para.color;
+    color = para.color;
   } else {
-    color = Math.random() * 360;
+    hue = Math.random() * 360;
   }
 
   function animate () {
     if (!para.color) {
-      color += 0.1;
-      color2 = `hsl(${color}, 100%, 80%)`;
+      hue += 2;
+      color = `hsl(${hue}, 100%, 80%)`;
     }
 
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
-
+    
+    // 每次更新动画，根据数组参数绘制全部图形
     for (let i = 0; i < round_arr.length; i++) {
-      ctx.fillStyle = color2;
+      ctx.fillStyle = color;
       ctx.beginPath();
       ctx.arc(round_arr[i].mouseX, round_arr[i].mouseY, round_arr[i].r, 0, Math.PI * 2);
       ctx.closePath();
