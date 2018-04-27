@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>Which one is the strongest?</h2>
+  <form>
+    <p>
+      <input type="radio" name="strongest" id="elephant" value="ELE" checked>
+      <label for="elephant">The elephant</label>
+      <br>
+      <input type="radio" name="strongest" id="rhinoceros" value="RHI">
+      <label for="rhinoceros">The rhinoceros</label>
+      <br>
+      <input type="radio" name="strongest" id="hippopotamus" value="HIP">
+      <label for="hippopotamus">The hippopotamus</label>
+      <br>
+    </p>
+    <p>
+      <label for="name">Your name</label>:
+      <input type="text" name="name" id="name" required>
+    </p>
+    <input type="submit" value="Vote">
+  </form>
+  <p id="result"></p>
+
+  <h2>Add new article</h2>
+  <form id="addArticle">
+    <p>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="article">
+    </p>
+    <p>
+      <label for="content">Content:</label>
+      <textarea name="article" id="content" cols="30" rows="10"></textarea>
+    </p>
+    <input type="submit" value="Add">
+  </form>
+  <p id="articleScan"></p>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+
+      fetch('https://thejsway-server.herokuapp.com/animals', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text())
+        .then(result => {
+          document.getElementById('result').textContent = result;
+        })
+        .catch(err => {
+          console.error(err.message);
+        })
+    })
+
+    // add article
+    document.querySelector('#addArticle').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      fetch('https://thejsway-server.herokuapp.com/articles', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.text())
+        .then(result => {
+          document.getElementById('articleScan').textContent = result;
+        })
+        .catch(err => {
+          console.error(err.message);
+        })
+    })
+
+    // visited country
+    const countries = [
+      {
+        name: 'fanyj',
+        countries: [
+          {
+            name: 'China',
+            year: 2012
+          },
+          {
+            name: 'Korea',
+            year: 2007
+          },
+          {
+            name: 'USA',
+            year: 2026
+          }
+        ]
+      }
+    ];
+
+    fetch('https://thejsway-server.herokuapp.com/api/countries', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(countries)
+    })
+      .then(response => response.text())
+      .then(result => {
+        console.log(result)
+      })
+      .catch(err => {
+        console.error(err.message);
+      })
+
+  </script>
+</body>
+
+</html>
