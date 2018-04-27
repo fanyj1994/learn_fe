@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .links ul {
+    display: flex;
+    list-style-type: none;
+  }
+  .links ul li {
+    padding: 0 10px;
+  }
+
+  .links ul li:not(:last-child) {
+    border-right: 1px solid #333;
+  }
+  </style>
+</head>
+
+<body>
+  <h2>A few programming languages</h2>
+  <ul id="languageList">
+  </ul>
+
+  <h2>Some famous paintings</h2>
+  <table id="paintings">
+    <tr>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Artist</th>
+    </tr>
+  </table>
+
+  <h2>Grab random beer</h2>
+  <button id="grabButton">Grab a beer</button>
+  <div id="beer"></div>
+
+  <h2>Look Up a Github User</h2>
+  <input type="text" id="userName">
+  <button id="searchButton">查找</button>
+  <div id="userMessage"></div>
+
+  <h2>Some Star Wars planets</h2>
+  <div id="links" class="links">
+    <ul>
+      <li><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">5</a></li>
+      <li><a href="">6</a></li>
+      <li><a href="">7</a></li>
+      <li><a href="">8</a></li>
+      <li><a href="">9</a></li>
+      <li><a href="">10</a></li>
+    </ul>
+  </div>
+  <div id="infos"></div>
+  <script>
+    // Task1
+    fetch(
+        'https://raw.githubusercontent.com/bpesquet/thejsway/master/resources/languages.txt'
+      )
+      .then(response => response.text())
+      .then(text => {
+        console.log(text)
+        let languageItems = text.split(';');
+        let languageListContainer = document.createDocumentFragment();
+        let languageList = document.querySelector('#languageList');
+
+        languageItems.forEach(language => {
+          const languageItem = document.createElement('li');
+          languageItem.textContent = language;
+          languageListContainer.appendChild(languageItem);
+        })
+
+        languageList.appendChild(languageListContainer);
+      })
+
+    // Task2
+    fetch(
+        'https://raw.githubusercontent.com/bpesquet/thejsway/master/resources/paintings.json'
+      )
+      .then(response => response.json())
+      .then(paintings => {
+        let paintingsList = document.querySelector('#paintings');
+        let paintingsFragment = document.createDocumentFragment();
+
+        paintings.forEach(painting => {
+          let paintingItem = document.createElement('tr');
+          let paintingName = document.createElement('td');
+          let paintingYear = document.createElement('td');
+          let paintingAuthor = document.createElement('td');
+
+          paintingName.textContent = painting.name;
+          paintingYear.textContent = painting.year;
+          paintingAuthor.textContent = painting.artist;
+
+          paintingItem.appendChild(paintingName);
+          paintingItem.appendChild(paintingYear);
+          paintingItem.appendChild(paintingAuthor);
+
+          paintingsFragment.appendChild(paintingItem);
+
+          console.log(paintingsFragment)
+          paintingsList.appendChild(paintingsFragment)
+        })
+      })
+
+    // TASK CALLING AN OPEN API WITH JAVASCRIPT
+    const grabRandomBeer = () => {
+      fetch('https://api.punkapi.com/v2/beers/random')
+        .then(response => response.json())
+        .then(beers => {
+          const beer = beers[0];
+          console.log(beer);
+          const nameElement = document.createElement('p');
+          nameElement.textContent = beer.name;
+
+          const descriptionElement = document.createElement('p');
+          descriptionElement.textContent = beer.description;
+
+          const detailElement = document.createElement('p');
+          detailElement.textContent =
+            `Alcohol By Volume: ${beer.abv}. Volume: ${beer.volume.value} 
+            ${beer.volume.unit}. First brewed on ${beer.first_brewed}`;
+
+          const beerElement = document.getElementById('beer');
+          beerElement.innerHTML = '';
+
+          beerElement.appendChild(nameElement);
+          beerElement.appendChild(descriptionElement);
+          beerElement.appendChild(detailElement);
+
+        })
+        .catch(err => {
+          console.error(err.message);
+        })
+    };
+
+    document.getElementById('grabButton').addEventListener('click', grabRandomBeer);
+
+    // get github user message
+
+    const searchUser = (name) => {
+      console.log(name)
+      const url = `https://api.github.com/users/${name}`;
+      fetch(url).then(response => response.json())
+        .then(message => {
+          console.log(message);
+          const avatarElement = document.createElement('img');
+          avatarElement.src = message.avatar_url;
+
+          const nameElement = document.createElement('h3');
+          nameElement.textContent = message.name;
+
+          const blogElement = document.createElement('a');
+          blogElement.href = blogElement.textContent = message.blog;
+
+          const messageBox = document.getElementById('userMessage');
+          messageBox.innerHTML = '';
+          messageBox.appendChild(avatarElement);
+          messageBox.appendChild(nameElement);
+          messageBox.appendChild(blogElement);
+        })
+        .catch(err => {
+          console.error(err.message);
+        })
+    };
+
+    console.log(document.getElementById('searchButton'))
+    document.getElementById('searchButton').addEventListener('click', () => {
+      let searchName = document.getElementById('userName').value;
+      searchUser(searchName)
+    });
+
+    // star wars planets
+    const getPlanets = (index) => {
+      let url = `https://swapi.co/api/planets/${index}`;
+      fetch(url).then(response => response.json())
+        .then(planet => {
+          const nameElement = document.createElement('h3');
+          nameElement.textContent = planet.name;
+
+          const messageElement = document.createElement('p');
+          messageElement.textContent = planet.films.length > 1 
+            ? `Climate: ${planet.climate}. Population: ${planet.population}. Appears in ${planet.films.length} movies.`
+            : `Climate: ${planet.climate}. Population: ${planet.population}. Appears in ${planet.films.length} movie.`
+
+          const planetInfos = document.getElementById('infos');
+          planetInfos.innerHTML = '';
+          planetInfos.appendChild(nameElement);
+          planetInfos.appendChild(messageElement);
+        })
+    }
+
+    const indexs = document.querySelectorAll('#links ul li a');
+
+    indexs.forEach(index => {
+      index.addEventListener('click', (e) => {
+        e.preventDefault();
+        getPlanets(e.target.innerHTML)
+      });
+    })
+  </script>
+</body>
+
+</html>
