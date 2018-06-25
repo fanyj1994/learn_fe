@@ -12,4 +12,5 @@
 - `clear`. 清除前面输入的命令，使界面更整洁
 - `exit`. 关闭命令行面板
 - `cp [filePath/fileName] [anotherPath/newName]`. 复制 filePath 底下的 fileName 文件到 anotherPath 目录下，命名为 newName
-- `mv [fileName] [filePath/newName]`. 移动 fileName 文件到 filePath 目录下，并命名为 newName，newName不存在则按原名称移动 
+- `mv [fileName] [filePath/newName]`. 移动 fileName 文件到 filePath 目录下，并命名为 newName，newName不存在则按原名称移动
+- `explorer .` 在图形界面中打开当前文件夹
