@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D3 练习</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+  <script>
+    const animals = ['dog', 'cat', 'pigeon'];
+
+    const list = d3.selectAll('p')
+                    .data(animals)
+                    .enter()
+                    .append('p')
+                    .text((d, i) => '第' + Number(i + 1) + '个动物是：' + d);
+
+    const w = 500;
+    const h = 500;
+    const rectHeight = 25;
+    const padding = 30;
+    const dataset = [32, 34, 54, 24, 89, 58];
+    const length = (dataset.length + 5) * rectHeight;
+
+    const min = d3.min(dataset);
+    const max = d3.max(dataset);
+    // 定义线性比例尺
+    const xLinear = d3.scaleLinear()
+      .domain([0, max])
+      .range([0, w]);
+    const yLinear = d3.scaleLinear()
+      .domain([0, length])
+      .range([0, h]);
+    
+    const colors = ['red', 'green', 'yellow', 'blue', 'orange'];
+    const index = [1, 2, 3, 4, 5];
+    const ordinal = d3.scaleOrdinal()
+      .domain(index)
+      .range(colors);
+
+    // 定义svg画布
+    const svg = d3.select('body')
+            .append('svg')
+            .attr('width', w)
+            .attr('height', h)
+    
+    // 等比例绘制矩形
+    svg.selectAll('rect')
+      .data(dataset)
+      .enter()
+      .append('rect')
+      .attr('x', 0)
+      .attr('y', (d, i) => i * (rectHeight + 5))
+      .attr('width', d => xLinear(d)) // 应用比例尺
+      .attr('height', rectHeight)
+      .attr('fill', 'steelblue')
+    
+    // 定义比例尺
+    const xAxis = d3.axisBottom(xLinear)
+      .ticks(20); // 刻度值的数量
+
+    // 添加比例尺
+    svg.append('g')
+      .attr('transform', 'translateY(' + length + ')')
+      .call(xAxis);
+  </script>  
+</body>
+</html>
