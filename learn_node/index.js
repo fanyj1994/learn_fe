@@ -11,7 +11,7 @@ handle['/show'] = requestHandlers.show
 
 const newCircumference = circle.circumference(3),
       newArea = circle.area(3)
-    
+
 console.log(newCircumference, newArea)
 
 server.start(router.route, handle)
