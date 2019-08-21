@@ -63,3 +63,8 @@ React组件化思想的另一个体现是，可以在组件内部写只属于本
 - [React给白板上色](http://codepen.io/fanyj1994/full/PmYLdQ)
 - [React router创建单页应用](http://codepen.io/fanyj1994/full/jmNJXd)
 - [React-to-do-list](http://codepen.io/fanyj1994/full/wdwOOx)
+
+
+### 为什么不要用index作为JSX元素的key值
+
+存在风险，因为React区别DOM元素的唯一标识是key值，如果这个值不变，DOM就不会更新，当以index作为key值，如果数组本身不变，没问题，但是，如果数组发生改变，例如中间插入一个值，这个时候，从这个位置开始到后面的位置，所有的index对应的内容已经改变，但对于React来讲，index仍然是原来的序号，他并不会更新DOM。
