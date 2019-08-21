@@ -63,3 +63,33 @@ React组件化思想的另一个体现是，可以在组件内部写只属于本
 - [React给白板上色](http://codepen.io/fanyj1994/full/PmYLdQ)
 - [React router创建单页应用](http://codepen.io/fanyj1994/full/jmNJXd)
 - [React-to-do-list](http://codepen.io/fanyj1994/full/wdwOOx)
+
+### 代码分割
+
+1. React.lazy()可动态加载组件，也就是在父组件render的时候，进行动态引入：
+
+```React.lazy(() => import('./someComponent.js'));```
+
+同时，React提供一个Suspense组件，这个组件可以接受一个fallback属性，为动态导入组件指定备选渲染的内容，例如一个loading动画：
+
+``` js
+const someComponent = React.lazy(() => import('./someComponent.js'));
+render() {
+    return (
+        <div>
+            <Suspense fallback={<Loading />}>
+                <someComponent />
+            </Suspense>
+        </div>
+    )
+}
+```
+
+整体来讲，动态加载是为了重要的内容能够更快地执行。
+
+### context
+
+context 提供一种在多级组件中共享数据的方法，这样就不用通过 props 每层传递。
+
+官方指出，如果仅仅是为了避免每一级传递数据，使用component composition简单得多。
+
