@@ -37,3 +37,7 @@ JavaSript 严格意义上讲，没有类的概念，而是基于原型的，两�
 - [Two to one](codewar/Two-to-one.md)
 - [Your order please](codewar/Your-order-please.md)
 - [Dubstep](codewar/DubStep.md)
+
+# 一些问题
+
+1. 加不加分号：在[ ] ( ) + - 正则开始的斜杠开头时，不会自动插入分号

@@ -1,0 +1,868 @@
+[33mcommit 822e26865362a5233188494b76831d5a2a4bee4f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Jun 28 15:47:42 2019 +0800
+
+    学习node
+    测试commit换行
+
+[33mcommit c552a4b5ba5879da08bf042c1e2091f9173e268c[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Apr 7 10:35:38 2019 +0800
+
+    learn node
+
+[33mcommit c65917e97c6cb471fa3f468267c802f1f744c659[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Jan 12 20:41:58 2019 +0800
+
+    learn node
+
+[33mcommit 5ef38cdd178ee55c663564c22fa2da1c2a4680cc[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Jan 10 08:45:03 2019 +0800
+
+    learn d3
+
+[33mcommit be725fef63320660a4df2c1883d5d73332af1dcc[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Jul 19 17:19:52 2018 +0800
+
+    update diary about transition not work
+
+[33mcommit 114ae2d2eb47cb76d153f097b0858dd0f0273ee8[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Jul 3 19:04:17 2018 +0800
+
+    uodate diary about window.history
+
+[33mcommit 1b5fba8c7c94231e1c1667b387e07a7a84ad7dc7[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Jul 3 08:47:10 2018 +0800
+
+    update diary
+
+[33mcommit 0fc6a3abbc624de3d87fdb53fb5b2c113736b2b9[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Jun 25 17:07:54 2018 +0800
+
+    更新日志，命令行打开文件夹
+
+[33mcommit 00923fddd894417d8c120ab0f95f376b39bb2206[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon May 28 10:28:47 2018 +0800
+
+    update diary about DTD
+
+[33mcommit 2ade2498981005b5f129440c3a83d36c14325dd9[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue May 22 10:53:39 2018 +0800
+
+    increase knowledge about handlebar
+
+[33mcommit 75dc48b8967b663e4623bfd978aa974ed877c511[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue May 22 10:46:18 2018 +0800
+
+    uodate diary about handlebars
+
+[33mcommit d8939bf2cba9bd904ec1ffe05e136572bb7a9ca5[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri May 4 20:23:30 2018 +0800
+
+    update diary about tagged template literal
+
+[33mcommit 8887b73ed3e92b12edf2014501ec103df40c2b08[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Apr 29 14:48:15 2018 +0800
+
+    learn send data to a server
+
+[33mcommit b18fdd650d8e60b8147a0f3ea93ed06eb4ad0187[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Apr 27 23:09:29 2018 +0800
+
+    do some exercise about use formDate send data to server
+
+[33mcommit f949f91469d0dc2834327c7de9c0b800cdeac99d[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Apr 27 23:04:45 2018 +0800
+
+    do some exercise about use formDate send data to server
+
+[33mcommit 170fd8b090bcd308f9e1e996922f04a941f78697[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Apr 27 21:57:59 2018 +0800
+
+    do some exercise about api request
+
+[33mcommit 3aaf0eb1643c1af1a5cc7be1bcb418dd301e7969[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Apr 27 01:31:36 2018 +0800
+
+    do exercise about fetch api
+
+[33mcommit d2e1d8d953b3fe6aee382806b10da2e0342c38df[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Apr 27 00:06:10 2018 +0800
+
+    write a css good look navigator
+
+[33mcommit 3a0cbe405158f71e7b60ffc688489cd4753efc2a[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Apr 26 23:08:28 2018 +0800
+
+    write about JSON transimit method
+
+[33mcommit e7440700a1ede3b0987a89d0c91da5dfc580b041[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Apr 18 10:30:34 2018 +0800
+
+    add follow particle
+
+[33mcommit fb8aa325a2c0a911d0af5705fdf0d63239703855[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Apr 17 23:14:45 2018 +0800
+
+    learn canvas
+
+[33mcommit 383b19db8cadc3ec6c84723928442bdd23d963da[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Apr 16 14:00:19 2018 +0800
+
+    update diary
+
+[33mcommit 9c3b0abe7c999d776918b68814417a1acae1c2a4[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Apr 16 13:45:47 2018 +0800
+
+    style adjust
+
+[33mcommit 870c59cbe36f33315462c05516430a516a3d8e43[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Apr 10 11:48:55 2018 +0800
+
+    update tec diary
+
+[33mcommit afa6be958a5e4ce337de6911335c6a93d8e87331[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Apr 9 11:11:56 2018 +0800
+
+    30 s css
+
+[33mcommit 147b6e616b4dc684970b4ef591640b98f75dbd76[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Apr 9 10:55:11 2018 +0800
+
+    30 s css
+
+[33mcommit 7aff8f00d2feacdaa7c5b6b96b6966bdbbdcb76e[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Apr 9 00:19:25 2018 +0800
+
+    learn canvas
+
+[33mcommit a027f275d943019405a87cdc40c3a23b0657e29d[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Apr 8 18:42:28 2018 +0800
+
+    css 30s
+
+[33mcommit ea68f8a3a7f6eea4c810cb4e5e75ed5e565e7ce9[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Apr 7 22:51:35 2018 +0800
+
+    30s css
+
+[33mcommit bb4e5dbcf322b5467b61ac4435f4dceda31db73e[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Apr 7 22:39:59 2018 +0800
+
+    30s css
+
+[33mcommit 6b8bc6bd37fb9b7d9a0e7fb6669af015e7f8d80c[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Apr 6 12:21:31 2018 +0800
+
+    pseudo element and 30-seconds-css
+
+[33mcommit ac6e2562477428c9b66fba1fc8b92114b4f38371[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Apr 1 21:22:16 2018 +0800
+
+    about this in function was called
+
+[33mcommit 4feb3e4c988333a8983beeeed5e9a50ac14d713c[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Mar 30 11:44:45 2018 +0800
+
+    modify grid-columns to grid-column
+
+[33mcommit fedad192a712bf2b8681d86ea5d289e7f55be640[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Mar 29 22:14:49 2018 +0800
+
+    css world
+
+[33mcommit 881f1a9ffa3e25d95507bb5226329529a8f968ad[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Mar 25 11:15:35 2018 +0800
+
+    more about vue basic
+
+[33mcommit 05cd6671eaac16174b9caa7d019b1d5069c08ac0[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Mar 24 23:42:47 2018 +0800
+
+    about component
+
+[33mcommit febf42a6ba7279cea48b32d591fe1d8ee10fe2fd[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Mar 24 00:43:18 2018 +0800
+
+    new vue test
+
+[33mcommit 479bd71631c7a3e562810f63d7070443d477d9fe[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Mar 19 09:23:54 2018 +0800
+
+    typing
+
+[33mcommit e0d8e68c1c154b0c2d5c752420e1dd803e441393[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Mar 17 22:55:22 2018 +0800
+
+    background position
+
+[33mcommit 5c8001434419c05d9c8fe7c8d7ad06529a5d5393[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Mar 17 22:10:39 2018 +0800
+
+    inner radius
+
+[33mcommit 66201fc515b7ee670e5f436532569e7263edbf7b[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Mar 16 23:33:37 2018 +0800
+
+    learn echarts and outline
+
+[33mcommit 3363fef6f4fcb26a7f918722d1e9fff525e32f0f[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Mar 16 10:39:39 2018 +0800
+
+    about clourse
+
+[33mcommit d2765d38f2defaf5036de8f647a622e7cef2fe85[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Mar 14 10:40:07 2018 +0800
+
+    about grid layout basic concept
+
+[33mcommit 8131b737af29a238af0fd39fc34efb7e4b12c1bf[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Mar 11 22:17:21 2018 +0800
+
+    add css variables and truncate text
+
+[33mcommit f0855828aa5c9c51f097f090705ee68b5ba04615[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Mar 10 23:21:43 2018 +0800
+
+    learn flex and grid layout
+
+[33mcommit 02b47e861733699c0e7e7b9fdc7ed891b844cbde[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Mar 9 17:19:12 2018 +0800
+
+    learn about text hover underline style
+
+[33mcommit 5a97fe0e9cd72963e87d40c9e53ad8bea84cb6cc[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Mar 9 13:52:09 2018 +0800
+
+    add a spinner animation
+
+[33mcommit bb904afb89d456428f9db617a98306ab813f5be3[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Mar 7 21:07:38 2018 +0800
+
+    learn about box-sizing
+
+[33mcommit a81511d66cbe3f2fb40657c79b03d21cb3f161c7[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Mar 6 11:54:22 2018 +0800
+
+    how to use animation
+
+[33mcommit 348d3bd50640e8dbe34254289f7fbc1588362ff8[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Jan 16 11:50:03 2018 +0800
+
+    update technology diary
+
+[33mcommit da6ffbbc9e63bb62e9fc54cba16af3395a7b615d[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Jan 16 11:48:27 2018 +0800
+
+    update tecnology diary
+
+[33mcommit c8c5f9ccaa874463202e20fe83523026a7b88ca4[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Dec 4 08:42:21 2017 +0800
+
+    learn node
+
+[33mcommit 331a0bc5e99b06a4d7846041b742639b44c5813b[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Oct 31 10:48:50 2017 +0800
+
+    learn node
+
+[33mcommit 002d1c873a1bea9e93565a77d461f50b40a6de86[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Oct 28 09:58:24 2017 +0800
+
+    update diary
+
+[33mcommit 4fbe73647c5b6ab1c46916b6f6ce5a8f9359ef01[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Oct 27 18:13:53 2017 +0800
+
+    update diary
+
+[33mcommit 291a7f193b76c9e177298feee48bcb3eb941ed85[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Oct 5 20:59:39 2017 +0800
+
+    调整格式
+
+[33mcommit ffca1168aa6b097d172ba523c6d29cc783e9296c[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Sep 26 11:33:20 2017 +0800
+
+    更新日志
+
+[33mcommit 5fcd578d187a60306247ebd8dcc0c7276d17915f[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Sep 19 10:40:06 2017 +0800
+
+    更新日志
+
+[33mcommit 673c6c1eb4261ce2e8f8bbca0d12c0e081ee45cd[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Sep 12 11:35:31 2017 +0800
+
+    更新日志
+
+[33mcommit 370708ab11b6532930ccc9ed52555b6c979dabf1[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Aug 28 15:33:39 2017 +0800
+
+    update diary
+
+[33mcommit de0096087c485672cb909c7fa45e0c0a547ed896[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Aug 26 23:34:35 2017 +0800
+
+    更新日志
+
+[33mcommit 4b43e8bab82dd9ed4a924df111aad06ca01987b1[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Aug 17 22:17:45 2017 +0800
+
+    学习 node
+
+[33mcommit 4ce6615b111a2530a2c29da19b6282b2b5ba11c8[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Aug 16 22:53:53 2017 +0800
+
+    处理连接错误
+
+[33mcommit 746e22210f311fbd01c79e314023f4599033f442[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Aug 11 17:02:33 2017 +0800
+
+    update diary
+
+[33mcommit 17fc3f4a8cc3fdd9acbc58e0f5b6b949c15b4ec6[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Aug 10 13:37:59 2017 +0800
+
+    update tech diary about mobile web develop
+
+[33mcommit 01da70c316160a5fda77630f17b82291ba5a46bb[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Aug 9 17:08:38 2017 +0800
+
+    更新关于移动端布局的知识
+
+[33mcommit c03dfdc6a099a90d5fd02a14817bf5f617ce2e5e[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Aug 9 16:15:22 2017 +0800
+
+    更新日志，关于IE兼容性
+
+[33mcommit e83670877a38ce816fc227e3ea86a8777ce13c02[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Aug 9 16:10:30 2017 +0800
+
+    更新日志，关于IE兼容性
+
+[33mcommit b214d1720b0e61c1a8acdca2fb8f0ea7083fe9df[m
+Merge: b56a786 3eb534e
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Aug 8 09:33:08 2017 +0800
+
+    关于对象浅拷贝的一些知识点
+
+[33mcommit b56a786e1f339a1ff0bfc9e32cb395d30625114d[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Aug 8 09:32:10 2017 +0800
+
+    关于对象浅拷贝的一些知识点
+
+[33mcommit 3eb534e9cef4d04aa004a5572cba36496e8827f8[m
+Merge: 2c3bb3a 5dbb61d
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Aug 5 12:11:51 2017 +0800
+
+    update diary
+
+[33mcommit 2c3bb3af251568b23f563316c113f2f9f82fb491[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Aug 5 12:10:50 2017 +0800
+
+    update diary
+
+[33mcommit 5dbb61d7d747e5e4e418dd9f75d21b0df8d96af0[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Aug 3 14:07:27 2017 +0800
+
+    更新日记
+
+[33mcommit 502ea7d9c83fcabaaa9b44fc264a40c5a2552705[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Aug 1 17:27:20 2017 +0800
+
+    update
+
+[33mcommit 367ece310d6778b41fe7d8eac0e8a65fae16739b[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Aug 1 16:08:48 2017 +0800
+
+    更新日记
+
+[33mcommit 78b8a5f1e75a2282a4e9aabddb57b1801c13a461[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Jul 28 19:43:35 2017 +0800
+
+    添加移动锚点方法
+
+[33mcommit 83e125a233b7b1e9c4d9dea383b509aff6120677[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Jul 27 09:17:01 2017 +0800
+
+    添加文本省略问题三种解决方案
+
+[33mcommit e9727f95b15d8d615f6cc7867f7aa71685f083ad[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Jul 25 17:28:11 2017 +0800
+
+    uodate diary
+
+[33mcommit a094d604283345659d3b121ba6f87a0bb589c158[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Jul 20 14:54:05 2017 +0800
+
+    更新技术日志
+
+[33mcommit ce46b2209d21e4b0c3806f1758a8c306e8c81956[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Jul 16 23:05:19 2017 +0800
+
+    diary
+
+[33mcommit 8dde096de4663496488c4f3427bd4f88e9c4be83[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Jul 12 16:54:05 2017 +0800
+
+    anchor
+
+[33mcommit 2f7138a75a618677a768466af2169d17ec70c05a[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Jul 12 09:51:22 2017 +0800
+
+    update diary
+
+[33mcommit e96e733d067b0fdc753ad14b843916b267b85fb2[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Jul 5 20:36:18 2017 +0800
+
+    update diary about vue components data how to passing data from child to parent
+
+[33mcommit d415da2f4222f9e8c3f100b77442f1844f50989a[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Jun 30 17:44:32 2017 +0800
+
+    diary
+
+[33mcommit dbbb997067cac600a43833ce68ddbab846c3778e[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Jun 30 14:20:34 2017 +0800
+
+    diary
+
+[33mcommit da45ea4dfa92549f9e2c4fb362b6f2fc0a9a30b4[m
+Merge: b74bd08 25e89b0
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Jun 26 13:57:55 2017 +0800
+
+    更新gitflow日志
+
+[33mcommit b74bd0839eb51c8b906af41aabaf7941a7a0bbf8[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Jun 26 13:56:06 2017 +0800
+
+    更新gitflow日志
+
+[33mcommit 25e89b0869c82f6b7e549dbe02fa233e7ca07c55[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Jun 25 09:40:21 2017 +0800
+
+    update diary
+
+[33mcommit 8c35fe9cfb5048289d888a4e24ebc0943efab613[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Jun 24 17:29:17 2017 +0800
+
+    uodate diary
+
+[33mcommit 8db9af1cc439718c88ac8d27d33e757caa8cdaf2[m
+Merge: b3eaea0 db8e1e5
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Jun 24 10:36:54 2017 +0800
+
+    update diary
+
+[33mcommit b3eaea010f1f1d01811c162121125418d74e79c5[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Jun 23 09:08:11 2017 +0800
+
+    update diary
+
+[33mcommit db8e1e54622167869f61b653418e4d05339ed739[m
+Author: AS_Fan <946020997@qq.com>
+Date:   Thu Jun 22 20:05:46 2017 -0500
+
+    Update 2017-6.md
+
+[33mcommit 7c4f397997cddedfca5cb169ab3b4a9ecae4fcbe[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Jun 22 16:12:36 2017 +0800
+
+    update diary
+
+[33mcommit 47fb9a2cf050f2d4b608b2a7906372d49094589c[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Jun 22 16:06:28 2017 +0800
+
+    update diary
+
+[33mcommit 17a469112c8373342a15c381d112ee289bf8d59e[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Jun 22 11:44:41 2017 +0800
+
+    add all files
+
+[33mcommit 55f52ca58a2c31a46485044ed623648b662f91a2[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Jun 14 22:26:07 2017 +0800
+
+    update diary
+
+[33mcommit c085ee3748aec41bbac97555f54011170b585995[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Jun 13 17:57:55 2017 +0800
+
+    update diary
+
+[33mcommit 337f54a0c4c706c32d64cd63a1a45d1ad33ce4fb[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Jun 13 10:46:43 2017 +0800
+
+    update 6-13 diary
+
+[33mcommit a53555a3bb04253b6631b5780e9309cc385f38d7[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Jun 12 15:58:21 2017 +0800
+
+    add diary
+
+[33mcommit 87d8bfe14ebf9554c8226055c6fc3bdb22f6f689[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Jun 11 19:48:35 2017 +0800
+
+    add some tools use method
+
+[33mcommit f3f861d83605c772181d7b0b816148f779aa7844[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Jun 5 11:43:59 2017 +0800
+
+    update diary
+
+[33mcommit 84695956ae08e233bdad916ac0fd5b6fed1f8646[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Jun 4 00:01:16 2017 +0800
+
+    uodate diary
+
+[33mcommit 99b304d30e94736d7782a771363e9a56d3b1d0c6[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Jun 2 11:27:41 2017 +0800
+
+    update read me
+
+[33mcommit ae683c33c29431b6e55f4e4b6aab8e85e9e5234b[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Jun 2 11:25:28 2017 +0800
+
+    update diary-6-2
+
+[33mcommit acb84ef7c33d97400e86da08953288bce8b774fc[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat May 20 12:20:17 2017 +0800
+
+    update readme
+
+[33mcommit 112a12d3751602cc793053bffa82f530695fa030[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat May 20 12:17:38 2017 +0800
+
+    update tech diary
+
+[33mcommit 8ac46e79a89687d77d70170c3fa0b7d70dc52b03[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri May 19 11:13:55 2017 +0800
+
+    update tech diary
+
+[33mcommit 6ded5558501371b9052f4222c754749523be2edb[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun May 14 10:14:45 2017 +0800
+
+    add tec diary
+
+[33mcommit 36e03c997663333bbaf5d435c7ea34fdd1f6b94a[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun May 14 10:10:21 2017 +0800
+
+    add tec diary
+
+[33mcommit 2bc046652467d0c05e12adf38f0c888f26189cbb[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Tue Apr 18 16:03:38 2017 +0800
+
+    update flex contain
+
+[33mcommit ca9665e95bdbe3b791b24d85dfb255688b126832[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Apr 17 14:05:04 2017 +0800
+
+    add padding-top to markdown
+
+[33mcommit 45e064208a0d1ec5dbdd7aa2aa3b98b37e9b8beb[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Apr 17 14:01:23 2017 +0800
+
+    add padding-top to markdown
+
+[33mcommit 1a2d60087d5dcb6abbfcd62b0ede877587e13f72[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Apr 16 18:09:33 2017 +0800
+
+    delete webpack and ajax
+
+[33mcommit b759b69900fcb933673829efd1bc65d688e448d3[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Apr 16 17:58:51 2017 +0800
+
+    change ajax and webpack readme
+
+[33mcommit 0ff1e11b705079051d7afd008531275b6121b7b3[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Apr 16 17:42:06 2017 +0800
+
+    add ife-task3
+
+[33mcommit c7b9d05f1062c0468890cfac9d26c6173a44a3a8[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Apr 16 17:38:42 2017 +0800
+
+    add ife-task3
+
+[33mcommit b40edd9a6007ff9faeaec6bcd8535a4b16b6d988[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Apr 13 16:56:29 2017 +0800
+
+    update flex content
+
+[33mcommit ffb01b7179dafb5485278f1da325cb91a891d771[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Apr 12 12:26:44 2017 +0800
+
+    move html document to codepen
+
+[33mcommit 1c9a1005e2fdff850cedfab87dfa8331e0de7962[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Apr 12 10:52:05 2017 +0800
+
+    move html document to codepen
+
+[33mcommit dfe8c87990b8f8bc498e5ae1b4658339e43fdd0e[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Apr 12 10:03:51 2017 +0800
+
+    add flexbox
+
+[33mcommit 4e1f4757f6dafc2949ebdac3b43af49eb6aaa271[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Apr 12 09:55:41 2017 +0800
+
+    add flexbox
+
+[33mcommit bb41deec29ff0c60091c245a4729a0f78a37a582[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Apr 12 09:54:32 2017 +0800
+
+    add flexbox
+
+[33mcommit 4354456d7d9b895848296a31675f385856ceae81[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Apr 12 09:52:07 2017 +0800
+
+    add flexbox
+
+[33mcommit e4db7e70d4c2b25c0e033f16644046faf015edcf[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Mar 24 18:36:05 2017 +0800
+
+    add flexbox
+
+[33mcommit 7490de130aeaf50ebb20cb831e4c2b5eaac90b24[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Mar 24 12:36:11 2017 +0800
+
+    add ajax content
+
+[33mcommit bf66e67e2807f5c13874ba2740d46c438426d94e[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Mar 24 12:34:23 2017 +0800
+
+    add ajax content
+
+[33mcommit 86bbb6db7702ea9996db63e8563ce8b783ebb911[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Mar 24 12:31:35 2017 +0800
+
+    add ajax content
+
+[33mcommit 7387f292c26b9fd44f884b359e088299caaf26c3[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Mar 22 11:20:36 2017 +0800
+
+    add css float
+
+[33mcommit 1dd8a4c57163258524cc550c0985bbb093ab56c6[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sun Mar 19 21:59:36 2017 +0800
+
+    add css float
+
+[33mcommit 7dafb950cd20bb899e2fcf988952ef320a2ad873[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Sat Mar 18 11:19:13 2017 +0800
+
+    update codewar
+
+[33mcommit c2f2290643815dbccc6af306ef4279e686a2e65b[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Mar 17 19:25:01 2017 +0800
+
+    update react readme
+
+[33mcommit 2c60145cee92b08a6c14696e9c02c730cba23b91[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Fri Mar 17 10:34:16 2017 +0800
+
+    update fcc
+
+[33mcommit 47032b30f45b5e83e4dc0e78743e66862af7a0da[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Mar 16 10:56:57 2017 +0800
+
+    update fcc
+
+[33mcommit 696a773364b4ec776e00d5943d2af1dec7dc9226[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Mar 16 10:20:44 2017 +0800
+
+    update fcc
+
+[33mcommit e439bd5713ef315d9943f77a9aeebe5cbcec1976[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Mar 16 10:09:04 2017 +0800
+
+    update fcc
+
+[33mcommit 0166706b8d86ee7eae74d8305213793b5a401798[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Thu Mar 16 10:06:58 2017 +0800
+
+    update fcc
+
+[33mcommit 5fe4660f9aaa844e5dd7cc6eaf7c1ad76af5ef0e[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Mar 15 16:44:56 2017 +0800
+
+    uodate
+
+[33mcommit cd54a0203148ad472c94c7d21909767b823d69ac[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Mar 15 15:51:24 2017 +0800
+
+    uodate
+
+[33mcommit ba8deee3c0ba03992338b4701a33671388ebb9d7[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Wed Mar 15 15:21:39 2017 +0800
+
+    uodate
+
+[33mcommit 6f5671b9d3034e515f4b22bd2942b758ebc7d928[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Mar 13 23:05:48 2017 +0800
+
+    update react readme
+
+[33mcommit 6a67388227913314339b225f47153f1b6e7565cd[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Mar 13 17:46:56 2017 +0800
+
+    update react readme
+
+[33mcommit 0945072d717d39e47e42c20edb58a194c7a65290[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Mar 13 17:40:11 2017 +0800
+
+    update webpack readme
+
+[33mcommit 4fe1adf9ea21467253ae349dfe985c0fbdbe4be1[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Mar 13 13:16:56 2017 +0800
+
+    update readme
+
+[33mcommit 163e960a3898dc1466f1ac059f637973fd5dbceb[m
+Author: fanyj1994 <946020997@qq.com>
+Date:   Mon Mar 13 13:12:52 2017 +0800
+
+    update readme
