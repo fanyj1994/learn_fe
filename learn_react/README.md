@@ -8,6 +8,7 @@ body {
 React是Facebook开发的前端View层框架，也就是说它专注于用户界面呈现。
 
 # 它有什么特性
+
 1. 组件化。组件化使得前端业务逻辑更清晰，维护便捷，也就是说，整个Web应用可以被封装成一个个组件，每个组件是完全独立的个体，组件有自己的样式，逻辑，结构，通过模块依赖的方式，形成一个组件树，这个组件树构成了页面。
 
 ![组件化示意图](https://github.com/fouber/blog/raw/master/201508/assets/modular_2.png)（图片来自https://github.com/fouber/blog/issues/10）
@@ -92,6 +93,53 @@ render() {
 context 提供一种在多级组件中共享数据的方法，这样就不用通过 props 每层传递。
 
 官方指出，如果仅仅是为了避免每一级传递数据，使用component composition简单得多。
+
+### error boundary
+
+错误边界，在组件内部发生错误时，提供一个备选的渲染内容，以防止页面崩溃的组件。
+
+错误边界一般可以定义在 `static getDerivedStateFromError()` 和 `componentDidCatch()` 两个生命周期中，前者用来显示备选的错误UI。后者抛出错误信息。
+
+定义好组件之后，将易出错的组件使用错误组件包裹渲染，当错误发生时，就会渲染你定义好的备选UI，并捕获错误信息。
+
+### ref
+
+使用ref的步骤：
+
+1. 创建一个空的 ref： this.inputRef = React.CreateRef();
+2. 在 DOM 元素或 React 实例关联1中创建的 ref 元素：`<input ref={ref => this.inputRef = ref}>`
+3. 访问实例 ref：this.inputRef.current
+
+class组件仍然可以在引用其时定义ref，获得针对这个实例的引用.
+
+不能在函数组件上使用ref，因为它没有实例。
+https://codepen.io/fanyj1994/pen/rNBjbXV?editors=0010
+
+ref转发是一个可选特性。它允许组件接收 ref，并将其向下传递给子组件。
+
+### fragment
+
+创建一个可以直接渲染的jsx片段：
+
+``` js
+render() {
+    return (
+        <React.Fragment>
+            <li>sdsds</li>
+        </React.Fragment>
+    )
+}
+```
+
+可以使用短语法：
+
+``` js
+<>
+ //something go here
+</>
+```
+
+短语法不支持key属性。
 
 ### 为什么不要用index作为JSX元素的key值
 
