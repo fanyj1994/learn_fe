@@ -1,3 +1,5 @@
+let isNumber:number
+
 interface Person {
   firstName: string;
   lastName: string
