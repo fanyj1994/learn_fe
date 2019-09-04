@@ -224,22 +224,49 @@ console.log(Person instanceof Object) // true
 明确了它背后发生的事情，现在我们动手亲自实现一个 `new`:
 
 ``` js
-function anotherNew(constructor) {
+function anotherNew(constructorFunc, ...args) {
   // 判断传入的值是否为构造函数
-  if (typeof constructor !== 'function') {
-    return `${constructor} is not a constructor`;
+  if (typeof constructorFunc !== 'function') {
+    return `${constructorFunc} is not a constructor`;
   }
 
   let obj = {}; // 1.新建一个空对象
-  obj.__proto__ = constructor.prototype;
-  this = obj
+  obj.__proto__ = constructorFunc.prototype; // 原型链接
+  let result = constructorFunc.apply(obj, [...args]); // 绑定 this,将参数与传入构造函数绑定
+  return result instanceof Object ? result : obj; // 判断构造函数是否为对象
 }
 ```
 
+我们来测试一下是否能否工作：
+
+``` js
+function Person(name) {
+  this.name = name;
+  this.sayName = function () {
+    return 'Hahaha, I am Bob.';
+  }
+}
+
+const person1 = anotherNew(Person, 'Jack');
+console.log(person1.name) // "Jack"
+console.log(person1.sayName) // "Hahaha, I am Bob."
+console.log(person1.__proto__ === Person.prototype) // true
+```
+
+到这里，我们就实现了一个属于自己的 new 操作符。
+
+### 总结
+
+这篇文章从 `new` 操作符出发，了解了它的本质，是 JS 为了模仿类的行为，包装而成的一个功能，基本来说，其是通过新建一个对象，并将该对象的原型设置为构造函数，使其具备构造函数的全部方法和属性，形成一个基于原型链的继承。同时，对象还可以拥有自己的属性和方法，在具体访问时，优先访问位于原型链下游的属性。
+
+最后我们根据掌握的原理，动手实现了一个 `new` 操作符。
+
+这是我 JS 基础回归第一篇，谬误之处，请大家指教。
+
 ### 参考文章
 
-1、https://github.com/creeperyang/blog/issues/9
-2、https://juejin.im/post/584e1ac50ce463005c618ca2
-3、https://juejin.im/post/5c7b963ae51d453eb173896e
-4、https://juejin.im/post/58f94c9bb123db411953691b
-5、https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+1. https://github.com/creeperyang/blog/issues/9
+2. https://juejin.im/post/584e1ac50ce463005c618ca2
+3. https://juejin.im/post/5c7b963ae51d453eb173896e
+4. https://juejin.im/post/58f94c9bb123db411953691b
+5. https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
