@@ -25,4 +25,3 @@
 - [关于Http](https://github.com/fanyj1994/learn_fe/issues/1)
 - [互联网与浏览器（一）](https://github.com/fanyj1994/learn_fe/issues/2)
 - [互联网与浏览器（二）](https://github.com/fanyj1994/learn_fe/issues/3)
-- [XSS 攻击]
