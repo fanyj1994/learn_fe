@@ -1,6 +1,7 @@
 
 # 学习前端技术的笔记
-
+- JS 基础回归
+  - [new 操作符、原型和原型链](learn_js/JS基础回归01：new操作符，原型和原型链.md)
 - [我的前端代码风格指南](我的前端风格指南.md)
 - [学习JavaScript](learn_js/README.md)
 - [学习CSS](learn_css/README.md)
@@ -19,8 +20,6 @@
     - [2017-9](tec_diary/2017-9.md)
     - [2018-1](tec_diary/2018-1.md)
     - [2018-2](tec_diary/2018-2.md)
-- JS 基础回归
-  - [new 操作符、原型和原型链](learn_js/JS基础回归01：new操作符，原型和原型链.md)
 
 ### 其他
 
