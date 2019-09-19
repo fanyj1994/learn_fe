@@ -18,5 +18,5 @@
   - [2017-9](tec_diary/2017-9.md)
   - [2018-1](tec_diary/2018-1.md)
   - [2018-2](tec_diary/2018-2.md)
-- 奇怪问题记录
-  - [tec_diary/tricky.md]
+- [奇怪问题记录](tec_diary/tricky.md)
+
