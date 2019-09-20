@@ -78,7 +78,7 @@ console.log(obj2.obj1.sayName()) // Tom
 
 在上面的调用链中，obj1 是调用的最后一环，所以，this 绑定到 obj1 身上，返回值为 Tom.
 
-#### 3. 显示绑定
+#### 3. 显式绑定
 
 在 JS 中，可以在某个对象上强制调用某个函数，将 this 强制绑定到这个对象，这个工作由 `call()` 和 `apply()` 两个方法实现。
 
@@ -101,7 +101,7 @@ function sayName() {
 sayName.call(obj) // Tom
 ```
 
-在上面的例子中，this 通过 call 方法绑定给 obj，达到了显示地改变 this 指向的目的。
+在上面的例子中，this 通过 call 方法绑定给 obj，达到了显式地改变 this 指向的目的。
 
 JS 中还提供一个显式绑定的模式： bind 绑定，bind 函数会返回一个新的函数，它的工作是，把 this 绑定到传入的参数，并调用原始函数。
 
@@ -133,6 +133,7 @@ const obj = {
 }
 
 function test() {
+  // 箭头函数中的 this 取决于 test的 this
   setTimeout(() => console.log(this.name), 100)
 }
 
@@ -156,7 +157,10 @@ new 绑定 > 硬绑定 > 隐式绑定 > 默认绑定
 
 所以，遇到几种绑定方式同时出现的情况，我们可以按照如下的思路进行判断。
 
-### 改变 this 指向的几种方法
+1. 函数是否是由 new 创建的实例调用。如果是，this 指向创建的新对象
+2. 函数是否是显式绑定，也就是 call、apply调用，如果是，this 指向指定的新对象：`func.call(obj)`, this 指向 obj
+3. 函数是否是隐式绑定，如果是，this 指向调用的上下文对象：`obj.func()`， this 指向 obj1
+4. 如果不属于以上情况，则属于默认调用，this 绑定到全局对象（严格模式下，undefined）。
 
 ### 参考资料
 
