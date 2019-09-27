@@ -5,6 +5,7 @@
 
 - [new 操作符、原型和原型链](learn_js/JS基础回归01：new操作符，原型和原型链.md)
 - [this 的所有一切](learn_js/JS基础回归02：this的所有一切.md)
+- [闭包](learn_js/JS基础回归03：闭包.md)
 
 ### CSS
 
