@@ -1,6 +1,6 @@
 # 其他记录
 
-- [我的前端代码风格指南](我的前端风格指南.md)
+- [我的前端代码风格指南](my-frontend-style.md)
 - [学习JavaScript](learn_js/README.md)
 - [学习CSS](learn_css/README.md)
 - [学习React](learn_react/README.md)
@@ -19,4 +19,3 @@
   - [2018-1](tec_diary/2018-1.md)
   - [2018-2](tec_diary/2018-2.md)
 - [奇怪问题记录](tec_diary/tricky.md)
-
