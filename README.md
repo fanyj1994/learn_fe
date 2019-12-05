@@ -2,6 +2,8 @@
 
 > 拙朴刚健，求真慧缺，言少思烦，流连世情。
 
+---
+
 ## JavaScript
 
 - [new 操作符、原型和原型链](https://github.com/fanyj1994/learn_fe/issues/6)
