@@ -84,7 +84,6 @@ a = 2;      //赋值操作留在原地
 
 要注意的是，在ES6中，用let和const声明的变量，将不会被提升到最顶部，所以，如果上面的变量a是用let声明，则会报出ReferenceError.
 
-
 ### 参考资料
 1. 《你不知道的JavaScript》
 2. [MDN-变量](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_Types#%E5%A3%B0%E6%98%8E)

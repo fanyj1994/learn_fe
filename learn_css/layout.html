@@ -19,10 +19,12 @@
       margin-top: 20px;
       overflow: hidden;
     }
+
     .left {
       width: 300px;
       background: green;
     }
+
     .right {
       width: 300px;
       background: red;
@@ -82,6 +84,27 @@
       display: grid;
       grid-template-columns: 300px auto 300px;
     }
+
+    .section {
+      margin-top: 20px;
+      min-height: 1000px;
+    }
+
+    .section .top {
+      background: green;
+      height: 200px;
+    }
+
+    .section .bottom {
+      height: 200px;
+      background: red;
+    }
+
+    .section .middle {
+      background: orange;
+    }
+
+    
   </style>
 </head>
 <body>
@@ -176,6 +199,100 @@
     <div class="top"></div>
     <div class="middle"></div>
     <div class="bottom"></div>
+  </div>
+
+  <style>
+    .two-column > div {
+      height: 200px;
+    }
+
+    .two-column .left1 {
+      background: #fba;
+    }
+
+    .two-column .right1 {
+      background: orange;
+    }
+
+    .two-column.float .left1 {
+      width: 200px;
+      float: left;
+    }
+
+    .two-column.float .right1 {
+      overflow: hidden;
+    }
+
+    .two-column.position {
+      position: relative;
+    }
+
+    .two-column.position .left1 {
+      width: 200px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .two-column.position .right1 {
+      margin-left: 200px;
+    }
+
+    .two-column.flex {
+      display: flex;
+    }
+
+    .two-column.flex .left1 {
+      width: 200px;
+    }
+
+    .two-column.flex .right1 {
+      flex: 1;
+    }
+
+    .two-column.table {
+      display: table;
+      width: 100%;
+    }
+
+    .two-column.table > div {
+      display: table-cell;
+    }
+
+    .two-column.table .left1 {
+      width: 200px;
+    }
+
+    .two-column.grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+  </style>
+
+  <h3>两栏布局，左边固定宽度，右边自适应</h3>
+  <div class="two-column float">
+    <div class="left1">1</div>
+    <div class="right1">1</div>
+  </div>
+
+  <div class="two-column position">
+    <div class="left1">2</div>
+    <div class="right1">2</div>
+  </div>
+
+  <div class="two-column flex">
+    <div class="left1">3</div>
+    <div class="right1">3</div>
+  </div>
+
+  <div class="two-column table">
+    <div class="left1">4</div>
+    <div class="right1">4</div>
+  </div>
+
+  <div class="two-column grid">
+    <div class="left1">5</div>
+    <div class="right1">5</div>
   </div>
 </body>
 </html>

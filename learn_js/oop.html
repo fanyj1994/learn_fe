@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>面向对象</title>
+</head>
+<body>
+  <script>
+    // 类的声明
+    function Animal(name) {
+      this.name = name
+    }
+
+    class Animal2 {
+      constructor(name) {
+        this.name = name
+      }
+    }
+
+    // 实例类的对象
+    console.log(new Animal('cat'), new Animal2('dog'))
+
+    // 实现继承：JS 继承基于原型链实现
+    // 1. 借助构造函数实现继承；缺点：无法继承父类原型链上的东西   
+    function Parent1() {
+      this.name = 'parent1'
+    }
+
+    function Child1() {
+      Parent1.call(this)
+
+      this.type = 'child1'
+    }
+
+    console.log(new Child1)
+
+    // 2. 借助原型链实现继承；缺点：原型对象共用，导致修改父类的属性，会影响所有的实例
+    function Parent2() {
+      this.name = 'parent2'
+    }
+
+    function Child2() {
+      this.type = 'child2'
+    }
+
+    Child1.prototype = new Parent2()
+    console.log(new Child2())
+
+    // 3. 组合方式;缺点：父类的构造函数会执行两次
+    function Parent3() {
+      this.name = 'parent3'
+      this.play = [1, 2, 3]
+    }
+
+    function Child3() {
+      Parent3.call(this)
+      this.type = 'child3'
+    }
+
+    Child3.prototype = new Parent3()
+    var s3 = new Child3()
+    var s4 = new Child3()
+    s3.play.push(4)
+    console.log(s3.play, s4.play)
+
+    // 组合继承的优化1;缺点：子类的constructor指向parent
+    function Parent4() {
+      this.name = 'parent3'
+      this.play = [1, 2, 3]
+    }
+
+    function Child4() {
+      Parent4.call(this)
+      this.type = 'child4'
+    }
+
+    Child3.prototype = Parent4.prototype
+    var s5 = new Child4()
+    var s6 = new Child4()
+    s5.play.push(4)
+    console.log(s5.play, s6.play)
+
+    // 组合继承的优化2
+    function Parent5() {
+      this.name = 'parent5'
+      this.play = [1, 2, 3]
+    }
+
+    function Child5() {
+      Parent5.call(this)
+      this.type = 'child4'
+    }
+
+    Child5.prototype = Object.create(Parent5.prototype)
+    Child5.prototype.constructor = Child5;
+  </script>
+</body>
+</html>

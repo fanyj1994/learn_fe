@@ -9,9 +9,10 @@
 - [new 操作符、原型和原型链](https://github.com/fanyj1994/learn_fe/issues/6)
 - [this 到底指向哪里](https://github.com/fanyj1994/learn_fe/issues/7)
 - [闭包](https://github.com/fanyj1994/learn_fe/issues/8)
-- [JS性能优化策略（占坑中）](learn_js/JS性能优化策略.md)
+- [JS性能优化策略](learn_js/JS性能优化策略.md)
 - [JS隐式转换（占坑中）](learn_js/JS隐式转换.md)
 - [promise（占坑中）](learn_js/JS基础回归04：promise.md)
+- [函数节流与防抖](learn_js/debounce-and-throttle.md)
 
 ## CSS
 

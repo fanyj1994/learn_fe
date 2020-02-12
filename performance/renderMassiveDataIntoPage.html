@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>面试：一大大数据量渲染的问题</title>
+</head>
+
+<body>
+  <!-- Q：一个比较常见的面试题目类型，服务端一口气返回十分多的数据，让你渲染到页面上，如何提升页面性能 -->
+  <!-- 
+    * 四种思路：
+    * 1. 使用 setTimeout 分批渲染
+    * 2. 使用 requestAnimationFrame
+    * 3. 使用 web worker 分批渲染
+    * 4. 只渲染可视区域，用户滚动等事件时，实时计算需要渲染的内容
+   -->
+  <ul id="root"></ul>
+  <script>
+    // 直接遍历渲染
+    var html = ''
+    let arr = []
+    for (var i = 0; i <= 100000; i++) {
+      arr.push(i)
+    }
+
+    // 方法1
+    function apartArr(arr) {
+      let groups = [],
+        group = []
+      for (let i = 0, len = arr.length; i < len; i++) {
+        if (i !== 0 && (i % 100 === 0)) {
+          groups.push(group)
+          group = []
+        }
+        group.push(arr[i])
+      }
+
+      return groups
+    }
+    const groups = apartArr(arr)
+
+    for (let i = 0, len = groups.length; i < len; i++) {
+      setTimeout(() => {
+        // renderGroup(groups[i])
+      }, 0)
+    }
+
+    function renderGroup(arr) {
+      let html = document.createDocumentFragment()
+      for (let j = 0, len = arr.length; j < len; j++) {
+        const li = document.createElement('li')
+        li.innerHTML = arr[j]
+        html.appendChild(li)
+      }
+
+      document.querySelector('#root').appendChild(html)
+    }
+
+    // 方法二: 使用requestAnimationFrame()实现
+    var beginTime = performance.now();
+    console.log('beginTime', beginTime);
+    let total = 100000
+    let ul = document.querySelector('#root')
+    function loopRender(curTotal, curIndex) {
+      if (curTotal <= 0) return
+
+      let pageCount = Math.min(curTotal, 500);
+      window.requestAnimationFrame(function () {
+        for (let i = 0; i < pageCount; i++) {
+          let li = document.createElement('li')
+          li.innerHTML = curIndex + i
+          ul.appendChild(li)
+        }
+        loopRender(curTotal - pageCount, curIndex + pageCount)
+      })
+    }
+    loopRender(total, 0)
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var endTime = performance.now();
+      console.log('DOMContentLoaded endTime', endTime);
+      var total = ((endTime - beginTime) / 1000).toFixed(5);
+      console.log('DOMContentLoaded render 100000 items takes ' + total + ' 秒');
+    });
+    window.onload = function () {
+      var endTime = performance.now();
+      console.log('window.onload endTime', endTime);
+      var total = ((endTime - beginTime) / 1000).toFixed(5);
+      console.log('window.onload render 100000 items takes ' + total + ' 秒');
+    }
+  </script>
+</body>
+
+</html>
